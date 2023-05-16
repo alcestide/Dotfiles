@@ -43,6 +43,30 @@ keys = [
              lazy.spawn("obsidian"),
              desc='Obsidian'
              ),
+        Key([mod, "shift"], "c",
+             lazy.spawn('thunar'),
+             desc='File Manager'
+             ),
+        Key([], "Print",
+             lazy.spawn("flameshot gui"),
+             desc='Flameshot'
+             ),
+        Key([mod], "v",
+             lazy.spawn("pavucontrol"),
+             desc='Pavucontrol'
+             ),
+        Key([mod], "b",
+             lazy.spawn("blueman-manager"),
+             desc='Bluetooth Manager'
+             ),
+        Key([mod, "Shift"], "F3",
+             lazy.spawn("setxkbmap us"),
+             desc='US Keyboard Layout'
+             ),
+        Key([mod, "Shift"], "F4",
+             lazy.spawn("setxkbmap it"),
+             desc='IT Keyboard Layout'
+             ),
           Key([mod, "shift"], "up",
              lazy.layout.move_up(),
              desc='Move up a section in treetab'
@@ -133,3 +157,5 @@ keys = [
          Key([], "F1", lazy.to_screen(0)),
          Key([], "F2", lazy.to_screen(1)),
         ]
+
+cursor_warp=True
