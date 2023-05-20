@@ -76,7 +76,7 @@ keys = [
              desc='Move down a section in treetab'
              ),
          Key([mod, "shift"], "t",
-             lazy.spawn("telegram-dekstop"),
+             lazy.spawn("telegram-desktop"),
              desc='Telegram'
              ),
          ### Windows

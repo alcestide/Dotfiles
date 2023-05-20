@@ -295,22 +295,7 @@ if len(os.listdir("/sys/class/power_supply"))==0:
             background=colors[4],
         )
     )
-else:
-    default.append(
-        widget.Battery(
-            fontsize=xx,
-            font=xf,
-            foreground=colors[0],
-            low_percentage=0.3,
-            low_background="#0ee9af",
-            background=colors[4],
-            low_foreground=colors[0],
-            update_interval=1,
-            charge_char='',
-            discharge_char='',
-            format=' {char} {percent:2.0%} ',
-        ),
-    )
+
 
 screens = [
     Screen(

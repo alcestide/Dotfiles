@@ -12,4 +12,4 @@ mouse = [
 
 follow_mouse_focus = True
 bring_front_click = False
-cursor_warp = False
+cursor_warp = True

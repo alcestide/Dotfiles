@@ -1,4 +1,5 @@
 from libqtile import layout
+from libqtile.config import Match
 
 layout_theme = {"border_width": 0,
                 "margin": 40,
@@ -20,7 +21,11 @@ layout_border = dict(
 floating_layout = layout.Floating(
 border_width=0,
 border_focus="#000000",
-border_normal="#000000",
+border_normal="#000000", float_rules=[
+    *layout.Floating.default_float_rules,
+    Match(title='Volume Control'),
+    Match(title='Bluetooth Devices')
+]
 )
 
 

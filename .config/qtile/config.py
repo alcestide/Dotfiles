@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import re
 import socket
@@ -22,6 +21,16 @@ def start_once():
     subprocess.call([home + '/.config/qtile/autostart.sh'])
 
 wmname = "LG3D"
+
+@hook.subscribe.client_new
+def disable_floating(window):
+    rules = [
+        Match(wm_class="mpv")
+    ]
+
+    if any(window.match(rule) for rule in rules):
+        window.togroup(qtile.current_group.name)
+        window.cmd_disable_floating()
 
 # Extra
 cursor_warp=True

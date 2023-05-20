@@ -19,3 +19,5 @@ for i in groups:
         Key([mod], i.name, lazy.group[i.name].toscreen()),
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name) , lazy.group[i.name].toscreen()),
     ])
+
+cursor_warp=True
