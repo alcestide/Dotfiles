@@ -22,6 +22,7 @@ I mostly use tiling-wms, especially i3-wm and currently qtile (even though I ten
 - `picom`
 - `alacritty`
 - `doomemacs`
+- Some of the wallpapers I use
 
 ![2023-05-23_00-13](https://github.com/alcestide/Dotfiles/assets/106203061/c051a8f3-f921-4318-9d74-bd6456321961)
 ![2023-05-23_00-17](https://github.com/alcestide/Dotfiles/assets/106203061/09b7b455-9012-443f-865f-e41950e2750a)
