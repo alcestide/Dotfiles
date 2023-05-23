@@ -13,7 +13,7 @@ I mostly use _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and curr
 
 - **GTK Theme:** [Sweet Dark](https://github.com/EliverLara/Sweet)
 
-![2023-05-11_11-51](https://github.com/alcestide/Dotfiles/assets/106203061/cf744be5-289c-466e-a13a-c2573e2c529d)
+![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
 
 ## Contents
 
