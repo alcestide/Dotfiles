@@ -27,5 +27,7 @@ I mostly use _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and curr
 Included several of the wallpapers I use on most of my machines.
 
 ![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
+![2023-05-25_00-50](https://github.com/alcestide/Dotfiles/assets/106203061/3b0cbbe4-dca3-49a0-8b67-772c43e80493)
+
 ![2023-05-23_00-17](https://github.com/alcestide/Dotfiles/assets/106203061/09b7b455-9012-443f-865f-e41950e2750a)
 
