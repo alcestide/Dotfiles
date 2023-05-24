@@ -56,3 +56,7 @@
 (package! tron-legacy-theme)
 (package! cyberpunk-theme)
 (package! corfu)
+(package! ewal)
+(package! ewal-doom-themes)
+(package! ewal-spacemacs-themes)
+(package! theme-magic)

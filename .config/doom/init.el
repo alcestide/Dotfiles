@@ -206,23 +206,6 @@
 (setq visual-fill-column-width 130
       visual-fill-column-center-text t)
 
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-present))
-
-(defun my/org-present-start ()
-        (setq-local face-remapping-alist '((default (:height 1.5) variable-pitch)
-                                           (header-line (:height 4.0) variable-pitch)
-                                           (org-document-title (:height 1.75) org-document-title)
-                                           (org-code (:height 1.55) org-code)
-                                           (org-verbatim (:height 1.55) org-verbatim)
-                                           (org-block (:height 1.25) org-block)
-                                           (org-block-begin-line (:height 0.7) org-block)))
-        (setq visual-fill-column-mode 1
-              visual-line-mode 1))
-
-(defun my/org-present-end ()
-  (visual-fill-column-mode 0)
-  (visual-line-mode 0)
-  (setq-local face-remapping-alist '((default variable-pitch default))))
-
-(add-hook 'org-present-mode-hook 'my/org-present-start)
-(add-hook 'org-present-mode-quit-hook 'my/org-present-end)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(setq org-hide-emphasis-markers t)
+;(setq ewal-json-file "~/.cache/wal/colors")

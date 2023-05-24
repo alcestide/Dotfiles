@@ -39,9 +39,9 @@ keys = [
              lazy.spawn("emacsclient -a '' -c"),
              desc='Emacs'
              ),
-         Key([mod, "shift"], "o",
-             lazy.spawn("obsidian"),
-             desc='Obsidian'
+         Key([mod, "shift"], "k",
+             lazy.spawn("gitkraken"),
+             desc='GitKraken'
              ),
         Key([mod, "shift"], "c",
              lazy.spawn('thunar'),

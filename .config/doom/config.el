@@ -6,7 +6,7 @@
 ;(setq doom-theme 'doom-ayu-dark)
 (setq doom-theme 'doom-homage-black)
 ;(setq doom-theme 'tron-legacy)
-
+;(setq doom-theme 'ewal-json-file)
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "John Doe"
@@ -80,8 +80,34 @@
 ;(setq fancy-splash-image "~/.config/doom/splash/lain1.png")
 ;(setq fancy-splash-image "~/.config/doom/splash/ah1.jpg")
 (let ((alternatives '("ah1.jpg"
+                      "ah2.png"
+                      "ah3.jpg"
                       "lain1.png")))
                       
   (setq fancy-splash-image
         (concat doom-private-dir "splash/"
                 (nth (random (length alternatives)) alternatives))))
+
+(use-package ewal
+  :init (setq ewal-use-built-in-always-p nil
+              ewal-use-built-in-on-failure-p t
+              ewal-built-in-palette "sexy-monokai"))
+(use-package ewal-doom-themes
+  :init (progn
+          (setq doom-theme-underline-parens t
+                my:rice:font (font-spec
+                              :family "JetBrainsMono Nerd Font"
+                              :weight 'semi-bold
+                              :size 11.0))
+          (show-paren-mode +1)
+          (global-hl-line-mode)
+          (set-frame-font my:rice:font nil t)
+          (add-to-list  'default-frame-alist
+                        `(font . ,(font-xlfd-name my:rice:font))))
+  :config (progn
+            (load-theme 'ewal-doom-vibrant t)
+            (enable-theme 'ewal-doom-vibrant)))
+(use-package ewal-evil-cursors
+  :after (ewal-doom-themes)
+  :config (ewal-evil-cursors-get-colors
+           :apply t :spaceline t))
