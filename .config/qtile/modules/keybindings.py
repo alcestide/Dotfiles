@@ -150,9 +150,11 @@ keys = [
         # Sound
          Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
          Key([], "XF86AudioPause", lazy.spawn("playerctl play-pause")),
-         Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@")),
+         Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
          Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%")),
          Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%")),
+         Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
+         Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
 
          Key([], "F1", lazy.to_screen(0)),
          Key([], "F2", lazy.to_screen(1)),

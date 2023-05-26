@@ -167,7 +167,7 @@ screens = [
                      block_highlight_text_color=ColorZ,
                  ),
                 widget.Spacer(),
-                widget.Systray(),
+                widget.Systray(font='feather'),
                 widget.TextBox(
                     text=" ",
                     foreground=ColorZ,
@@ -177,7 +177,7 @@ screens = [
                 ),
                            ],
             40,
-            margin=[30, 25, 25, 30],
+            margin=[25, 20, 0, 20],
             opacity=1,
         ),
         bottom=bar.Gap(18),
