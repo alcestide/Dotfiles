@@ -60,3 +60,5 @@
 (package! ewal-doom-themes)
 (package! ewal-spacemacs-themes)
 (package! theme-magic)
+(package! org-fragtog)
+(package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))

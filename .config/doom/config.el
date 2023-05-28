@@ -1,16 +1,14 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
 ;(setq doom-theme 'doom-ayu-dark)
 (setq doom-theme 'doom-homage-black)
 ;(setq doom-theme 'tron-legacy)
-;(setq doom-theme 'ewal-json-file)
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Angelo Panariti"
+      user-mail-address "angpanariti@gmail.com")
 
 ;; Doom exposes five (optional) variables f controlling fonts in Doom:
 ;;
@@ -24,8 +22,6 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18)
-      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 17))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -36,6 +32,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;(setq doom-theme 'doom-tokyo-night)
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 20)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 20))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -43,7 +41,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/Git/Enkefalos")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -82,11 +80,21 @@
 (let ((alternatives '("ah1.jpg"
                       "ah2.png"
                       "ah3.jpg"
+                      "ah4.jpeg"
+                      "ah5.jpeg"
+                      "ah6.jpg"
+                      "ah7.jpg"
+                      "ah8.jpg"
+                      "ah9.jpg"
+                      "ah10.jpg"
+                      "ah11.jpg"
                       "lain1.png")))
                       
   (setq fancy-splash-image
         (concat doom-private-dir "splash/"
                 (nth (random (length alternatives)) alternatives))))
+
+;; Pywal Implementation
 
 (use-package ewal
   :init (setq ewal-use-built-in-always-p nil
@@ -98,7 +106,7 @@
                 my:rice:font (font-spec
                               :family "JetBrainsMono Nerd Font"
                               :weight 'semi-bold
-                              :size 11.0))
+                              :size 14.0))
           (show-paren-mode +1)
           (global-hl-line-mode)
           (set-frame-font my:rice:font nil t)
@@ -107,7 +115,13 @@
   :config (progn
             (load-theme 'ewal-doom-vibrant t)
             (enable-theme 'ewal-doom-vibrant)))
-(use-package ewal-evil-cursors
-  :after (ewal-doom-themes)
-  :config (ewal-evil-cursors-get-colors
-           :apply t :spaceline t))
+
+(add-hook 'org-mode-hook 'org-fragtog-mode)
+;(setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
+(setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
+
+(setq visual-fill-column-mode t)
+(setq visual-fill-column-center-text t)
+(setq visual-fill-column-width 100)
+
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))

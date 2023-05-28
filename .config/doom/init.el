@@ -194,18 +194,15 @@
        (default +bindings +smartparens))
         ;; UTF-8 as default encoding
         ;;
-
+(setq visual-fill-column-mode 1)
+(setq visual-fill-column-center-text 1)
+(setq visual-fill-column-width 100)
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 (set-keyboard-coding-system 'utf-8-unix)
 (add-to-list 'file-coding-system-alist '("\\.org" . utf-8-unix))
 (modify-coding-system-alist 'file "" 'utf-8-unix)
-
 (setq org-startup-with-inline-images t)
-
-(setq visual-fill-column-width 130
-      visual-fill-column-center-text t)
-
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-hide-emphasis-markers t)
-;(setq ewal-json-file "~/.cache/wal/colors")
+
