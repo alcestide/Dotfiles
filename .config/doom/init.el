@@ -21,7 +21,7 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       company           ; the ultimate code completion backend
+       ;;company           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ;;ivy               ; a search engine for love and life
@@ -206,3 +206,4 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (setq org-hide-emphasis-markers t)
 
+(add-to-list 'completion-at-point-functions #'codeium-completion-at-point)

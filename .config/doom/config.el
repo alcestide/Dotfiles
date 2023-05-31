@@ -88,6 +88,12 @@
                       "ah9.jpg"
                       "ah10.jpg"
                       "ah11.jpg"
+                      "ah12.jpg"
+                      "ah13.png"
+                      "ah14.png"
+                      "ah15.jpg"
+                      "ah16.png"
+                      "ah17.jpg"
                       "lain1.png")))
                       
   (setq fancy-splash-image
@@ -125,3 +131,4 @@
 (setq visual-fill-column-width 100)
 
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
+(add-to-list 'completion-at-point-functions #'codeium-completion-at-point)

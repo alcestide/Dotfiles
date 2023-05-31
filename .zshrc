@@ -4,26 +4,8 @@ export VISUAL='emacs'
 export EDITOR='emacs'
 export TERMINAL='alacritty'
 export BROWSER='chrome'
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
-# append
-path+=('/home/david/pear/bin')
-# or prepend
-path=('/home/david/pear/bin' $path)
-# export to sub-processes (make it inherited by child processes)
-export PATH
 
-
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
-
-autoload -Uz compinit
-
-for dump in ~/.config/zsh/zcompdump(N.mh+24); do
-  compinit -d ~/.config/zsh/zcompdump
-done
-
-compinit -C -d ~/.config/zsh/zcompdump
+(cat ~/.cache/wal/sequences &)
 
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
@@ -61,7 +43,6 @@ setopt HIST_FIND_NO_DUPS   # When searching history don't display results alread
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 
 PROMPT='%B%F{blue}󰣇%f%b %B%F{cyan}%n%f%b %B%F{red}%~%f%b${vcs_info_msg_0_}%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}➜%f%b '
-
 #PROMPT='%B%F{blue}󰣇%f%b  %B%F{magenta}%n%f%b %B%F{red}%~%f%b${vcs_info_msg_0_}%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}%f%b '
 
 
@@ -87,6 +68,7 @@ if [[ "$TERM" == (kitty*|alacritty*|termite*|gnome*|konsole*|kterm*|putty*|rxvt*
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-
 alias vim='nvim'
-alias quitx='killall /usr/lib/Xorg'
+alias quitx='killall Xorg'
+alias mount-nas='sudo sshfs -o allow_other root@192.168.1.5:/mnt /mnt/nas'
+alias rwp='~/Documents/random_wal.sh'
