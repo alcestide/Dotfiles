@@ -2,23 +2,13 @@
 # See fstab(5) for details.
 
 # <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda2
+UUID=3d7e42f7-cb47-491f-9c2b-27b0a26927be	/         	ext4      	rw,relatime	0 1
 
-# Root
-UUID=bc5317de-8e68-4a0d-9409-12d256c85415	/         	ext4      	rw,relatime	0 1
-
-# Home
-UUID=66e281a3-6d54-44ab-a4a7-074a84cf4add	/home     	ext4      	rw,relatime	0 2
-
-# Swap
-UUID=ec416597-e34b-485d-9bc1-59c8a2e82306	none      	swap      	defaults  	0 0
+# /dev/sda1
+UUID=D7E5-8952      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
 # Seagate 4TB (on hdd3)
 UUID=d52a3eb7-b240-4550-9cee-29dcacf33d82  /mnt/hdd3   btrfs   defaults    0 0
 
-#/dev/sda1	/mnt/hdd3	auto	rw,exec,async,nofail,atime	0 0
-#/dev/sda1	/mnt/hdd3	auto	rw,exec,async,nofail,atime	0 0
-#/dev/sdb1	/mnt/hdd1	auto	rw,user=alcestide,exec,async,nofail,atime	0 0
-#/dev/sdc1	/mnt/hdd2	auto	rw,exec,async,nofail,atime	0 0
-#/dev/sda1	/mnt/hdd3	auto	rw,exec,async,nofail,atime	0 0
-#/dev/sde1	/mnt/hdd4	auto	rw,user=alcestide,exec,async,nofail,atime	0 0
-#/dev/sda1	/mnt/hdd3	btrfs	defaults	0 0
+
