@@ -67,6 +67,10 @@ keys = [
              lazy.spawn("setxkbmap it"),
              desc='IT Keyboard Layout'
              ),
+        Key([mod, "Shift"], "F5",
+             lazy.spawn("setxkbmap ru"),
+             desc='RU Keyboard Layout'
+             ),
           Key([mod, "shift"], "up",
              lazy.layout.move_up(),
              desc='Move up a section in treetab'
