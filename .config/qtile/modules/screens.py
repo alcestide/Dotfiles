@@ -93,11 +93,7 @@ screens = [
                  ),
                 widget.WindowName(),
                 widget.Spacer(),
-                widget.TextBox(
-                    text='',
-                    font='feather',
-                    fontsize=15,
-                ),
+                widget.Systray(),
                 widget.Spacer(length=10),
                 widget.CPU(format='{freq_current}GHz {load_percent}%'
                 ),
