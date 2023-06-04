@@ -207,3 +207,6 @@
 (setq org-hide-emphasis-markers t)
 
 (add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
+
+
+

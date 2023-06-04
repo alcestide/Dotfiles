@@ -3,8 +3,9 @@ from libqtile.lazy import lazy
 
 mod = "mod4"
 
-Terminal = "alacritty"      # My terminal of choice
-Browser = "google-chrome-stable" # My browser of choice
+Terminal = "alacritty"     
+Browser = "firefox"
+# Browser = "google-chrome-stable"
 
 keys = [
          ### Main

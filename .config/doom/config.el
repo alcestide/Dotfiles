@@ -123,12 +123,23 @@
             (enable-theme 'ewal-doom-vibrant)))
 
 (add-hook 'org-mode-hook 'org-fragtog-mode)
-;(setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 
 (setq visual-fill-column-mode t)
 (setq visual-fill-column-center-text t)
 (setq visual-fill-column-width 100)
 
-(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
+;(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
+
+;; Codeium
 (add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
+
+;; Deadgrep Key
+(global-set-key (kbd "<f5>") #'deadgrep)
+
+;; Default Deadgrep Dir
+(setq default-directory "~/Git/Enkefalos")
+
+;; Workaround Centaur-Tabs with Daemon
+(after! centaur-tabs
+  (setq centaur-tabs-set-bar 'right))
