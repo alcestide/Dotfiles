@@ -78,23 +78,10 @@
 ;(setq fancy-splash-image "~/.config/doom/splash/lain1.png")
 ;(setq fancy-splash-image "~/.config/doom/splash/ah1.jpg")
 (let ((alternatives '("ah1.jpg"
-                      "ah2.png"
-                      "ah3.jpg"
-                      "ah4.jpeg"
-                      "ah5.jpeg"
-                      "ah6.jpg"
-                      "ah7.jpg"
-                      "ah8.jpg"
-                      "ah9.jpg"
-                      "ah10.jpg"
-                      "ah11.jpg"
-                      "ah12.jpg"
-                      "ah13.png"
                       "ah14.png"
-                      "ah15.jpg"
                       "ah16.png"
                       "ah17.jpg"
-                      "lain1.png")))
+                      )))
                       
   (setq fancy-splash-image
         (concat doom-private-dir "splash/"
