@@ -119,7 +119,7 @@
 ;(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
 
 ;; Codeium
-(add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
+;;(add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
 
 ;; Deadgrep Key
 (global-set-key (kbd "<f5>") #'deadgrep)
@@ -130,3 +130,11 @@
 ;; Workaround Centaur-Tabs with Daemon
 (after! centaur-tabs
   (setq centaur-tabs-set-bar 'right))
+
+(use-package! lsp
+  :init
+  (setq lsp-pyls-plugins-pylint-enabled t)
+  (setq lsp-pyls-plugins-autopep8-enabled nil)
+  (setq lsp-pyls-plugins-yapf-enabled t)
+  (setq lsp-pyls-plugins-pyflakes-enabled nil)
+)
