@@ -119,7 +119,7 @@
 ;(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
 
 ;; Codeium
-;;(add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
+;; (add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
 
 ;; Deadgrep Key
 (global-set-key (kbd "<f5>") #'deadgrep)
