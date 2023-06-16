@@ -4,6 +4,8 @@ export VISUAL='emacs'
 export EDITOR='emacs'
 export TERMINAL='alacritty'
 export BROWSER='chrome'
+export PATH="/home/alcestide/.local/share/gem/ruby/3.0.0/bin:$PATH"
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 (cat ~/.cache/wal/sequences &)
 
@@ -28,7 +30,6 @@ expand-or-complete-with-dots() {
 zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
 
-
 HISTFILE=~/.config/zsh/zhistory
 HISTSIZE=5000
 SAVEHIST=5000
@@ -43,8 +44,8 @@ setopt HIST_FIND_NO_DUPS   # When searching history don't display results alread
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 
 PROMPT='%B%F{blue}󰣇%f%b %B%F{cyan}%n%f%b %B%F{red}%~%f%b${vcs_info_msg_0_}%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}➜%f%b '
-#PROMPT='%B%F{blue}󰣇%f%b  %B%F{magenta}%n%f%b %B%F{red}%~%f%b${vcs_info_msg_0_}%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}%f%b '
 
+#PROMPT='%B%F{blue}󰣇%f%b  %B%F{magenta}%n%f%b %B%F{red}%~%f%b${vcs_info_msg_0_}%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}%f%b '
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -72,3 +73,10 @@ alias vim='nvim'
 alias quitx='killall Xorg'
 alias mount-nas='sudo sshfs -o allow_other root@192.168.1.5:/mnt /mnt/nas'
 alias rwp='~/Documents/random_wal.sh'
+alias disks='sudo fdisk -l'
+alias fortivpn='cd /home/alcestide/Documents && ./fortinet_asl.sh && cd /home/alcestide'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
