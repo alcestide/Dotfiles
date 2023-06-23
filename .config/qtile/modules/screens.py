@@ -92,7 +92,6 @@ screens = [
                      block_highlight_text_color=ColorZ,
                  ),
                 widget.WindowName(),
-                widget.Spacer(),
                 widget.Systray(),
                 widget.Spacer(length=10),
                 widget.CPU(format='{freq_current}GHz {load_percent}%'
@@ -118,7 +117,7 @@ screens = [
                 widget.Spacer(length=20)
                            ],
             42,
-            margin=[25, 20, 0, 20],
+            margin=[23, 20, 0, 20],
             opacity=0.8,
         ),
         bottom=bar.Gap(5),
@@ -163,7 +162,7 @@ screens = [
                      block_highlight_text_color=ColorZ,
                  ),
                 widget.Spacer(),
-                widget.Systray(font='feather'),
+                widget.Clock(),
                 widget.TextBox(
                     text=" ",
                     foreground=ColorZ,
