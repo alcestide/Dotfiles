@@ -25,6 +25,8 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 
 - **GTK Theme:** [Sweet Dark](https://github.com/EliverLara/Sweet)
 
+- **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
+
 ![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
 
 ### Included Files

@@ -152,6 +152,9 @@ keys = [
              lazy.layout.toggle_split(),
              desc='Toggle between split and unsplit sides of stack'
              ),
+         Key([mod, "shift"], "l",
+             lazy.spawn('betterlockscreen -l dimblur --display 1 --span')
+             ),
         # Sound
          Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
          Key([], "XF86AudioPause", lazy.spawn("playerctl play-pause")),

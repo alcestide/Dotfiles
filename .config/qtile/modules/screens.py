@@ -51,8 +51,8 @@ extension_defaults = widget_defaults.copy()
 def open_pavu():
     qtile.cmd_spawn("pavucontrol")
 
-def open_instantsettings():
-    qtile.cmd_spawn("instantstartmenu")
+def open_settings():
+    qtile.cmd_spawn("rofi -show run")
 
 screens = [
     Screen(
@@ -72,7 +72,7 @@ screens = [
                     font = "feather",
                     fontsize = 24,
                     padding =10,
-                    mouse_callbacks = {"Button1": open_instantsettings},
+                    mouse_callbacks = {"Button1": open_settings},
                  ),
                  widget.GroupBox(
                      font='space mono for powerline bold',
@@ -80,7 +80,7 @@ screens = [
                      margin_y=4,
                      margin_x=4,
                      padding_y=5,
-                     padding_x=3,
+                     padding_x=4,
                      borderwidth=7,
                      inactive=ColorI,
                      active=ColorG,
@@ -92,7 +92,9 @@ screens = [
                      block_highlight_text_color=ColorZ,
                  ),
                 widget.WindowName(),
-                widget.Systray(),
+                widget.Systray(font='feather',
+                               background='#000000',
+                               foreground='#000000'),
                 widget.Spacer(length=10),
                 widget.CPU(format='{freq_current}GHz {load_percent}%'
                 ),
@@ -117,8 +119,8 @@ screens = [
                 widget.Spacer(length=20)
                            ],
             42,
-            margin=[23, 20, 0, 20],
-            opacity=0.8,
+            margin=[0, 0, 0, 0],
+            opacity=1,
         ),
         bottom=bar.Gap(5),
         left=bar.Gap(5),
@@ -141,7 +143,6 @@ screens = [
                     font = "feather",
                     fontsize = 18,
                     padding=9,
-                    mouse_callbacks = {"Button1": open_instantsettings},
                  ),
                  widget.GroupBox(
                      font='space mono for powerline bold',
@@ -172,8 +173,8 @@ screens = [
                 ),
                            ],
             40,
-            margin=[25, 20, 0, 20],
-            opacity=1,
+            margin=[0, 0, 0, 0],
+            opacity=0.8,
         ),
         bottom=bar.Gap(18),
         left=bar.Gap(18),
