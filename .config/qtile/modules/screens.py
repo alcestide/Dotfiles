@@ -120,7 +120,7 @@ screens = [
                            ],
             42,
             margin=[0, 0, 0, 0],
-            opacity=1,
+            opacity=0.84,
         ),
         bottom=bar.Gap(5),
         left=bar.Gap(5),

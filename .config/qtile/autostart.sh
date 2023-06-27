@@ -22,6 +22,5 @@ blueman-applet &
 picom &
 redshift-gtk &
 emacs --daemon &
-#bitwarden-desktop &
+bitwarden-desktop &
 flameshot &
-#dunst &

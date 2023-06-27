@@ -63,3 +63,5 @@
 (package! org-fragtog)
 (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
 (package! deadgrep)
+(package! org-make-toc)
+(package! irony)

@@ -119,7 +119,7 @@
 ;(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
 
 ;; Codeium
-;; (add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
+;;(add-to-list 'completion-at-point-functions #'codeium-completion-at-point)
 
 ;; Deadgrep Key
 (global-set-key (kbd "<f5>") #'deadgrep)
@@ -138,3 +138,5 @@
   (setq lsp-pyls-plugins-yapf-enabled t)
   (setq lsp-pyls-plugins-pyflakes-enabled nil)
 )
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
