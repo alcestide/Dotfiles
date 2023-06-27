@@ -23,7 +23,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 
 - **Terminal:** [Alacritty](https://github.com/alacritty/alacritty)
 
-- **GTK Theme:** [Sweet Dark](https://github.com/EliverLara/Sweet)
+- **GTK Theme:** [Material-Black-Blueberry](https://www.gnome-look.org/p/1316887)
 
 - **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 
