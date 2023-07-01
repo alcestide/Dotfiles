@@ -11,6 +11,7 @@ local default_plugins = {
     "Exafunction/codeium.vim",
     lazy = false,
     build = function ()
+      vim.g.codeium_disable_bindings = 1
     end
   },
 
@@ -20,6 +21,13 @@ local default_plugins = {
     config = function()
       require("orgmode").setup{}
       require("orgmode").setup_ts_grammar()
+    end
+  },
+
+  {
+    "cdelledonne/vim-cmake",
+    lazy = false,
+    config = function()
     end
   },
 
@@ -41,6 +49,13 @@ local default_plugins = {
 
   {
     "airblade/vim-rooter",
+    lazy = false,
+    config = function()
+    end
+  },
+
+  {
+    "itchyny/calendar.vim",
     lazy = false,
     config = function()
     end
@@ -162,6 +177,7 @@ local default_plugins = {
   -- lsp stuff
   {
     "williamboman/mason.nvim",
+    lazy_nvim = false,
     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUninstall", "MasonUninstallAll", "MasonLog" },
     opts = function()
       return require "plugins.configs.mason"
@@ -310,6 +326,15 @@ local default_plugins = {
 
 
 }
+
+local notify = vim.notify
+vim.notify = function(msg, ...)
+    if msg:match("warning: multiple different client offset_encodings") then
+        return
+    end
+
+    notify(msg, ...)
+end
 
 local config = require("core.utils").load_config()
 
