@@ -7,13 +7,17 @@ local default_plugins = {
   -- nvchad plugins
   { "NvChad/extensions", branch = "v2.0" },
 
-  {
-    "Exafunction/codeium.vim",
-    lazy = false,
-    build = function ()
-      vim.g.codeium_disable_bindings = 1
-    end
-  },
+--  {
+--    "Exafunction/codeium.vim",
+--    lazy = false,
+--    build = function ()
+--      vim.g.codeium_disable_bindings = 1,
+--      vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+--     vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+--      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+--      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+--    end
+--  },
 
   {
   "nvim-orgmode/orgmode",
@@ -31,14 +35,6 @@ local default_plugins = {
     end
   },
 
-  {
-  "TimUntersberger/neogit",
-    lazy = false,
-    dependencies = "nvim-lua/plenary.nvim",
-    config = function()
-      require("neogit").setup()
-    end
-  },
 
   {
     "tpope/vim-fugitive",
@@ -48,9 +44,10 @@ local default_plugins = {
   },
 
   {
-    "airblade/vim-rooter",
+    "ahmedkhalf/project.nvim",
     lazy = false,
     config = function()
+      require("project_nvim").setup { manual_mode = true,  exclude_dirs = {"*.git"}}
     end
   },
 
@@ -285,6 +282,7 @@ local default_plugins = {
       dofile(vim.g.base46_cache .. "nvimtree")
       require("nvim-tree").setup(opts)
       vim.g.nvimtree_side = opts.view.side
+      vim.cmd([[doautocmd NvimTree BufEnter *]])
     end,
   },
 
