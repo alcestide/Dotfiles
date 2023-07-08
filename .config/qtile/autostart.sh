@@ -1,5 +1,5 @@
 #!/bin/bash
-
+/usr/lib/notification-daemon-1.0/notification-daemon &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #~/.screenlayout/monitors.sh
 
