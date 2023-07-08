@@ -1,7 +1,7 @@
 # alk-Dotfiles
 Ever-changing _ricing_ and `*UNIX` OS configuration. Work in progress.
 
-I mostly use _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and currently [qtile](https://github.com/qtile/qtile) (even though I tend to wm-hop quite often 'cause I'm curious of the other alternatives). For what concerns _text editors_, I'm a [Doom Emacs](https://github.com/doomemacs/doomemacs) user and I edit with [Neovim](https://github.com/neovim/neovim) quite a lot too. 
+I mostly use _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and currently [qtile](https://github.com/qtile/qtile) (even though I tend to wm-hop quite often 'cause I'm curious of the other alternatives). For what concerns _text editors_, I'm a [Doom Emacs](https://github.com/doomemacs/doomemacs) user and I edit with [Neovim](https://github.com/neovim/neovim) (NvChad) quite a lot too. 
 
 **Colorschemes** are managed by `pywal` which generates them based on the wallpaper used. 
 
