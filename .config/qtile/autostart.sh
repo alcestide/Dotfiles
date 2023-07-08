@@ -1,7 +1,7 @@
 #!/bin/bash
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-~/.screenlayout/monitors.sh
+#~/.screenlayout/monitors.sh
 
 # These two lines of code set random wallpapers
 # from the defined directory. Change the `wallpapers` variable
@@ -12,7 +12,8 @@ wallpapers=(/mnt/hdd3/Media/Wallpapers/*)
 
 # Specific wallpaper
 
-wal -i "/mnt/hdd3/Media/Wallpapers/1680294372554987.jpg" &
+#wal -i "/mnt/hdd3/Media/Wallpapers/1680294372554987.jpg" &
+wal -i "/home/alcestide/Documents/Wallpapers/1680294372554987.jpg" &
 
 # Systray & Miscellaneous
 
@@ -22,5 +23,6 @@ blueman-applet &
 picom &
 redshift-gtk &
 emacs --daemon &
-bitwarden-desktop &
+#bitwarden-desktop &
 flameshot &
+python -m vorta --daemonize &

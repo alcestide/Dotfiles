@@ -36,6 +36,10 @@ keys = [
              lazy.restart(),
              desc='Restart Qtile'
              ),
+         Key([mod, "shift"], "n",
+             lazy.spawn("alacritty --config-file /home/alcestide/.config/alacritty/nvim_al.yml -e nvim"),
+             desc='Neovim'
+             ),
          Key([mod, "shift"], "e",
              lazy.spawn("emacsclient -a '' -c"),
              desc='Emacs'
