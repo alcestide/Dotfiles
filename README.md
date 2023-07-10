@@ -15,6 +15,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
   * [Included Files](https://github.com/alcestide/Dotfiles#included-files) 
   * [Screenshots](https://github.com/alcestide/Dotfiles#screenshots)
 * [Qtile Keymaps](https://github.com/alcestide/Dotfiles#qtile-keymaps)
+* [Nvim Keymaps](https://github.com/alcestide/Dotfiles#nvim-keymaps)
 
 ## Configuration
 
@@ -70,3 +71,11 @@ Included several of the **wallpapers** I use on most of my machines.
 - `Win + Shift + Tab` $\implies$ Previous layout
 - `F1` $\implies$ Switch focus to first monitor
 - `F2` $\implies$ Switch focus to second monitor
+
+## Nvim Keymaps
+
+- `Ctrl + n` $\implies$ Toggle NvimTree
+- `Space + ff` $\implies$ Open Telescope (Find Files)
+- `Ctrl + [n,p]` $\implies$ Next/Previous LSP Completion Result
+- `Ctrl + y` $\implies$ Accepts current LSP Completion
+- `Tab` $\implies$ (When Codeium is triggered) Accepts current completion
