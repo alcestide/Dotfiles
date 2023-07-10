@@ -78,4 +78,4 @@ Included several of the **wallpapers** I use on most of my machines.
 - `Space + ff` $\implies$ Open Telescope (Find Files)
 - `Ctrl + [n,p]` $\implies$ Next/Previous LSP Completion Result
 - `Ctrl + y` $\implies$ Accepts current LSP Completion
-- `Tab` $\implies$ (When Codeium is triggered) Accepts current completion
+- `Tab` $\implies$ **Codeium:** Accepts current completion
