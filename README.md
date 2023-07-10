@@ -75,6 +75,7 @@ Included several of the **wallpapers** I use on most of my machines.
 ## Nvim Keymaps
 
 - `Ctrl + n` $\implies$ Toggle NvimTree
+- `Ctrl + F5` $\implies$ Toggle Undotree
 - `Space + ff` $\implies$ Open Telescope (Find Files)
 - `Ctrl + [n,p]` $\implies$ Next/Previous LSP Completion Result
 - `Ctrl + y` $\implies$ Accepts current LSP Completion
