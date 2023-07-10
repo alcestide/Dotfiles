@@ -1,13 +1,14 @@
 # alk-Dotfiles
 Ever-changing _ricing_ and `*UNIX` OS configuration. Work in progress.
 
-I mostly use _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and currently [qtile](https://github.com/qtile/qtile) (even though I tend to wm-hop quite often 'cause I'm curious of the other alternatives). For what concerns _text editors_, I'm a [Doom Emacs](https://github.com/doomemacs/doomemacs) user and I edit with [Neovim](https://github.com/neovim/neovim) (NvChad) quite a lot too. 
+I mostly use Arch-Linux with _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and currently [qtile](https://github.com/qtile/qtile) (even though I tend to wm-hop quite often 'cause I'm curious of the other alternatives). For what concerns _text editors_, I'm mostly a [Neovim](https://github.com/neovim/neovim) and [Doom Emacs](https://github.com/doomemacs/doomemacs) user, who sometimes also tinkers with JetBrains IDEs. 
 
+Make sure to have all the proper **fonts** installed in your system (qtile require **ttf-icomoon-feather** and JetBrains Mono Nerd). The Qtile setup is based on a two monitors setup, but should also work just fine on single-monitor setups. If the config doesn't properly load, check `python -m ~/.config/qtile/config.py`, install the listed missing modules or simply fix the configuration file so it meets your needs.
 **Colorschemes** are managed by `pywal` which generates them based on the wallpaper used. 
 
-I use a simple **bash script** ([random_wal.sh](https://github.com/alcestide/Dotfiles/blob/main/random_wal.sh)) that takes a **specified folder**, cycles through it, selects a random image and applies both the wallpaper and the corresponding colorscheme. 
+I use a simple **bash script** ([random_wal.sh](https://github.com/alcestide/Dotfiles/blob/main/random_wal.sh)) that takes a **specified folder** (you need to change it), cycles through it, selects a random image and applies both the wallpaper and the corresponding colorscheme. 
 
-I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.sh`.
+I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.sh`, where I also specify what others applications I need to start up everytime the window manager boots.
 
 ### **Table of Contents**
 * [Configuration](https://github.com/alcestide/Dotfiles#configuration)
@@ -25,6 +26,12 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 
 - **GTK Theme:** [Material-Black-Blueberry](https://www.gnome-look.org/p/1316887)
 
+- **Icon Theme** [Flat-Remix-Blue-Dark](https://www.gnome-look.org/p/1214931)
+
+- **Mouse Cursor** [Bibata-Modern-Ice](https://www.gnome-look.org/p/1197198)
+
+- **Notification Server** [Notification-Daemon (GNOME)](https://archlinux.org/packages/extra/x86_64/notification-daemon/)
+
 - **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 
 ![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
@@ -38,6 +45,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 - `alacritty`
 - `doomemacs`
 - `flameshot`
+- `nvim`
 - `rofi`
 - Docker-Compose Boilerplates
 - X11 Miscellaneous Configurations
