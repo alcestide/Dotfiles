@@ -14,4 +14,3 @@ require 'configs.mappings'
 require('lazy').setup("plugins")
 require 'configs.treesitter'
 require 'configs.lsp'
-

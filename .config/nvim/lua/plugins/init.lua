@@ -10,7 +10,7 @@ return {
       	dependencies = { 'nvim-lua/plenary.nvim' }
     },
 
-    {   "ahmedkhalf/project.nvim"},
+    ----{   "ahmedkhalf/project.nvim"},
 
     {   "mbbill/undotree"   },
 
