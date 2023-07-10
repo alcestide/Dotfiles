@@ -74,6 +74,7 @@ Included several of the **wallpapers** I use on most of my machines.
 - `Win + Shift + Tab` $\implies$ Previous layout
 - `F1` $\implies$ Switch focus to first monitor
 - `F2` $\implies$ Switch focus to second monitor
+- `Print` $\implies$ Flameshot Screenshot
 
 ## Nvim Keymaps
 
