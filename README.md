@@ -3,7 +3,10 @@ Ever-changing _ricing_ and `*UNIX` OS configuration. Work in progress.
 
 I mostly use Arch-Linux with _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and currently [qtile](https://github.com/qtile/qtile) (even though I tend to wm-hop quite often 'cause I'm curious of the other alternatives). For what concerns _text editors_, I'm mostly a [Neovim](https://github.com/neovim/neovim) and [Doom Emacs](https://github.com/doomemacs/doomemacs) user, who sometimes also tinkers with JetBrains IDEs. 
 
-Make sure to have all the proper **fonts** installed in your system (qtile require **ttf-icomoon-feather** and JetBrains Mono Nerd). The Qtile setup is based on a two monitors setup, but should also work just fine on single-monitor setups. If the config doesn't properly load, check `python -m ~/.config/qtile/config.py`, install the listed missing modules or simply fix the configuration file so it meets your needs.
+Make sure to have all the proper **fonts** installed in your system (qtile require **ttf-icomoon-feather** and JetBrains Mono Nerd). 
+
+The Qtile setup is based on a **two monitors** setup, but should also work just fine on single-monitor setups. If the config **doesn't properly load**, check `python -m ~/.config/qtile/config.py`, install the listed missing **modules** or simply fix the configuration file so it meets your needs.
+
 **Colorschemes** are managed by `pywal` which generates them based on the wallpaper used. 
 
 I use a simple **bash script** ([random_wal.sh](https://github.com/alcestide/Dotfiles/blob/main/random_wal.sh)) that takes a **specified folder** (you need to change it), cycles through it, selects a random image and applies both the wallpaper and the corresponding colorscheme. 
