@@ -41,6 +41,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 - **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 
 ![2023-07-11_13-17](https://github.com/alcestide/Dotfiles/assets/106203061/838b2042-585a-4fa1-adb7-73a5b542f072)
+![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
 
 ### Included Files
 
@@ -61,7 +62,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 Included several of the **wallpapers** I use on most of my machines.
 ### Screenshots
 
-![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
+![2023-07-11_13-20](https://github.com/alcestide/Dotfiles/assets/106203061/28eca8a3-4f90-4823-9c57-5ec4daf7f703)
 ![2023-06-13_12-34](https://github.com/alcestide/Dotfiles/assets/106203061/2dd03ca6-4224-4171-a29a-813dc6fa000b)
 ![2023-05-25_00-50](https://github.com/alcestide/Dotfiles/assets/106203061/3b0cbbe4-dca3-49a0-8b67-772c43e80493)
 
