@@ -3,7 +3,7 @@ from libqtile.lazy import lazy
 
 mod = "mod4"
 
-Terminal = "kitty"
+Terminal = "alacritty"
 Browser = "firefox"
 # Browser = "google-chrome-stable"
 
@@ -11,7 +11,7 @@ keys = [
          ### Main
          Key([mod], "Return",
              lazy.spawn(Terminal),
-             desc='Kitty'
+             desc='Alacritty'
              ),
          Key([mod], "d",
              lazy.spawn("rofi -show drun -font 'fira 12'"),
