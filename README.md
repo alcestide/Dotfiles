@@ -13,6 +13,8 @@ I use a simple **bash script** ([random_wal.sh](https://github.com/alcestide/Dot
 
 I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.sh`, where I also specify what others applications I need to start up everytime the window manager boots.
 
+![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
+
 ### **Table of Contents**
 * [Configuration](https://github.com/alcestide/Dotfiles#configuration)
   * [Included Files](https://github.com/alcestide/Dotfiles#included-files) 
@@ -38,7 +40,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 
 - **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 
-![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
+![2023-07-11_13-17](https://github.com/alcestide/Dotfiles/assets/106203061/838b2042-585a-4fa1-adb7-73a5b542f072)
 
 ### Included Files
 
