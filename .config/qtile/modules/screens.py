@@ -39,7 +39,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='novamono for powerline bold',
+    font='icomoon-feather',
     fontsize=10,
     padding=5,
     background=ColorA
@@ -69,19 +69,19 @@ screens = [
                     text="",
                     foreground =ColorZ,
                     background=ColorC,
-                    font = "feather",
+                    font = "icomoon-feather",
                     fontsize = 24,
                     padding =10,
                     mouse_callbacks = {"Button1": open_settings},
                  ),
                  widget.GroupBox(
-                     font='space mono for powerline bold',
+                     font='Cantarell Bold',
                      fontsize=12,
                      margin_y=4,
                      margin_x=4,
-                     padding_y=7,
+                     padding_y=9,
                      padding_x=4,
-                     borderwidth=7,
+                     borderwidth=6,
                      inactive=ColorI,
                      active=ColorG,
                      rounded=True,
@@ -92,7 +92,7 @@ screens = [
                      block_highlight_text_color=ColorZ,
                  ),
                 widget.WindowName(),
-                widget.Systray(font='icomoon-feather',
+                widget.Systray(font='material-icons',
                                background='#000000',
                                foreground='#000000'),
                 widget.Spacer(length=10),
@@ -102,7 +102,7 @@ screens = [
 
                  widget.TextBox(
                     text='',
-                    font='feather',
+                    font='icomoon-feather',
                     fontsize=15,
                 ),
                 widget.Memory(
@@ -112,7 +112,7 @@ screens = [
 
                 widget.TextBox(
                     text='',
-                    font='feather',
+                    font='icomoon-feather',
                     fontsize=15,
                 ),
                 widget.Clock(),
@@ -140,12 +140,12 @@ screens = [
                     text="",
                     foreground =ColorZ,
                     background=ColorC,
-                    font = "feather",
+                    font = "icomoon-feather",
                     fontsize = 18,
                     padding=9,
                  ),
                  widget.GroupBox(
-                     font='space mono for powerline bold',
+                     font='icomoon-feather',
                      fontsize=11,
                      margin_y=4,
                      margin_x=4,

@@ -3,7 +3,7 @@ from libqtile.lazy import lazy
 
 mod = "mod4"
 
-Terminal = "alacritty"     
+Terminal = "kitty"
 Browser = "firefox"
 # Browser = "google-chrome-stable"
 
@@ -11,10 +11,10 @@ keys = [
          ### Main
          Key([mod], "Return",
              lazy.spawn(Terminal),
-             desc='Alacritty'
+             desc='Kitty'
              ),
          Key([mod], "d",
-             lazy.spawn("rofi -show drun"),
+             lazy.spawn("rofi -show drun -font 'fira 12'"),
              desc='Rofi'
              ),
          Key([mod, "shift"], "w",
@@ -37,7 +37,7 @@ keys = [
              desc='Restart Qtile'
              ),
          Key([mod, "shift"], "n",
-             lazy.spawn("alacritty --config-file /home/alcestide/.config/alacritty/nvim_al.yml -e nvim"),
+             lazy.spawn("alacritty -e nvim"),
              desc='Neovim'
              ),
          Key([mod, "shift"], "e",
@@ -47,6 +47,10 @@ keys = [
          Key([mod, "shift"], "k",
              lazy.spawn("gitkraken"),
              desc='GitKraken'
+             ),
+        Key([mod, "shift"], "s",
+             lazy.spawn("env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U"),
+             desc='Spotfy'
              ),
         Key([mod, "shift"], "c",
              lazy.spawn('thunar'),
@@ -66,14 +70,17 @@ keys = [
              ),
         Key([mod, "Shift"], "F3",
              lazy.spawn("setxkbmap us"),
+             lazy.spawn('notify-send -t 900 "Keyboard Layout" "Changed to US."'),
              desc='US Keyboard Layout'
              ),
         Key([mod, "Shift"], "F4",
              lazy.spawn("setxkbmap it"),
+             lazy.spawn('notify-send -t 900 "Keyboard Layout" "Changed to IT."'),
              desc='IT Keyboard Layout'
              ),
         Key([mod, "Shift"], "F5",
              lazy.spawn("setxkbmap ru"),
+             lazy.spawn('notify-send -t 900 "Keyboard Layout" "Changed to RU."'),
              desc='RU Keyboard Layout'
              ),
           Key([mod, "shift"], "up",

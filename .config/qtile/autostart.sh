@@ -8,21 +8,23 @@
 # to the desired location.
 
 wallpapers=(/mnt/hdd3/Media/Wallpapers/*)
-#wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
+wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
 
-# Specific wallpaper
+#uSpecific wallpaper
 
 #wal -i "/mnt/hdd3/Media/Wallpapers/1680294372554987.jpg" &
-wal -i "/home/alcestide/Documents/Wallpapers/1680294372554987.jpg" &
+#wal -i "/home/alcestide/Documents/Wallpapers/1680294372554987.jpg" &
 
 # Systray & Miscellaneous
 
 volumeicon &
+nicotine -s &
+# steam -silent &
 nm-applet &
 blueman-applet &
 picom &
-redshift-gtk &
+# redshift-gtk &
 emacs --daemon &
-#bitwarden-desktop &
+bitwarden-desktop &
 flameshot &
 python -m vorta --daemonize &

@@ -1,4 +1,5 @@
-
+env:
+  TERM: tmux-256color
 window:
   padding:
     x: 15

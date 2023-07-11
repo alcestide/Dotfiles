@@ -7,7 +7,11 @@ export BROWSER='chrome'
 export PATH="/home/alcestide/.local/share/gem/ruby/3.0.0/bin:$PATH"
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
+# Pywal
+
 (cat ~/.cache/wal/sequences &)
+
+if [ "$TMUX" = "" ]; then tmux; fi
 
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
@@ -69,14 +73,27 @@ if [[ "$TERM" == (kitty*|alacritty*|termite*|gnome*|konsole*|kterm*|putty*|rxvt*
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
+
+setopt append_history          # append to history file
+setopt extended_history        # write the history file in the ':start:elapsed;command' format
+unsetopt hist_beep             # don't beep when attempting to access a missing history entry
+setopt hist_expire_dups_first  # expire a duplicate event first when trimming history
+setopt hist_find_no_dups       # don't display a previously found event
+setopt hist_ignore_all_dups    # delete an old recorded event if a new event is a duplicate
+setopt hist_ignore_dups        # don't record an event that was just recorded again
+setopt hist_ignore_space       # don't record an event starting with a space
+setopt hist_no_store           # don't store history commands
+setopt hist_reduce_blanks      # remove superfluous blanks from each command line being added to the history list
+setopt hist_save_no_dups       # don't write a duplicate event to the history file
+setopt hist_verify             # don't execute immediately upon history expansion
+setopt inc_append_history      # write to the history file immediately, not when the shell exits
+unsetopt share_history         # don't share history between all sessions
+
 alias vim='nvim'
 alias quitx='killall Xorg'
 alias mount-nas='sudo sshfs -o allow_other root@192.168.1.5:/mnt /mnt/nas'
 alias rwp='~/Documents/random_wal.sh'
 alias disks='sudo fdisk -l'
-alias fortivpn='cd /home/alcestide/Documents && ./fortinet_asl.sh && cd /home/alcestide'
+alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
