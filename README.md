@@ -26,7 +26,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 
 - **Shell:** [zsh](https://www.zsh.org/) + [oh-my-zsh](https://ohmyz.sh/)
 
-- **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
+- **Terminal:** [Alacritty](https://github.com/alacritty/alacritty)
 
 - **GTK Theme:** [Material-Black-Blueberry](https://www.gnome-look.org/p/1316887)
 
