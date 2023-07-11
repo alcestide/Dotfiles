@@ -39,7 +39,8 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 - **Notification Server** [Notification-Daemon (GNOME)](https://archlinux.org/packages/extra/x86_64/notification-daemon/)
 
 - **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
-
+- 
+![2023-07-11_13-27](https://github.com/alcestide/Dotfiles/assets/106203061/ec799937-e554-41e5-89ab-9f02f101e657)
 ![2023-07-11_13-17](https://github.com/alcestide/Dotfiles/assets/106203061/838b2042-585a-4fa1-adb7-73a5b542f072)
 ![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
 
