@@ -125,7 +125,7 @@
 (global-set-key (kbd "<f5>") #'deadgrep)
 
 ;; Default Deadgrep Dir
-(setq default-directory "~/Git/Enkefalos")
+;;(setq default-directory "~/Git/Enkefalos")
 
 ;; Workaround Centaur-Tabs with Daemon
 (after! centaur-tabs
