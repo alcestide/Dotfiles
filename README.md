@@ -13,6 +13,8 @@ I use a simple **bash script** ([random_wal.sh](https://github.com/alcestide/Dot
 
 I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.sh`, where I also specify what others applications I need to start up everytime the window manager boots.
 
+![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
+
 ### **Table of Contents**
 * [Configuration](https://github.com/alcestide/Dotfiles#configuration)
   * [Included Files](https://github.com/alcestide/Dotfiles#included-files) 
@@ -26,7 +28,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 
 - **Shell:** [zsh](https://www.zsh.org/) + [oh-my-zsh](https://ohmyz.sh/)
 
-- **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
+- **Terminal:** [Alacritty](https://github.com/alacritty/alacritty)
 
 - **GTK Theme:** [Material-Black-Blueberry](https://www.gnome-look.org/p/1316887)
 
@@ -37,8 +39,10 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 - **Notification Server** [Notification-Daemon (GNOME)](https://archlinux.org/packages/extra/x86_64/notification-daemon/)
 
 - **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
-
-![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
+- 
+![2023-07-11_13-27](https://github.com/alcestide/Dotfiles/assets/106203061/ec799937-e554-41e5-89ab-9f02f101e657)
+![2023-07-11_13-17](https://github.com/alcestide/Dotfiles/assets/106203061/838b2042-585a-4fa1-adb7-73a5b542f072)
+![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
 
 ### Included Files
 
@@ -59,7 +63,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 Included several of the **wallpapers** I use on most of my machines.
 ### Screenshots
 
-![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
+![2023-07-11_13-20](https://github.com/alcestide/Dotfiles/assets/106203061/28eca8a3-4f90-4823-9c57-5ec4daf7f703)
 ![2023-06-13_12-34](https://github.com/alcestide/Dotfiles/assets/106203061/2dd03ca6-4224-4171-a29a-813dc6fa000b)
 ![2023-05-25_00-50](https://github.com/alcestide/Dotfiles/assets/106203061/3b0cbbe4-dca3-49a0-8b67-772c43e80493)
 
