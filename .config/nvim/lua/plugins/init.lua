@@ -4,6 +4,8 @@ return {
 		build = ":TSUpdate"
 	},
 
+    { "mfussenegger/nvim-dap"   },
+
     {
     	'nvim-telescope/telescope.nvim',
     	tag = '0.1.2',
@@ -13,6 +15,13 @@ return {
     ----{   "ahmedkhalf/project.nvim"},
 
     {   "mbbill/undotree"   },
+    {   "lervag/vimtex"     },
+    {'nvim-orgmode/orgmode',
+    ft = {'org'},
+    config = function()
+            require('orgmode').setup{}
+    end
+    },
 
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -33,7 +42,7 @@ return {
         lazy = false,
         dependencies = {"nvim-tree/nvim-web-devicons"},
         config = function()
-        require("nvim-tree").setup {}
+        require("nvim-tree").setup({sync_root_with_cwd = true})
         end,
     },
 
@@ -42,6 +51,16 @@ return {
       {'L3MON4D3/LuaSnip'},
     },
   },
+
+  {'akinsho/toggleterm.nvim'},
+
+  {
+  "NvChad/nvterm",
+  config = function ()
+    require("nvterm").setup()
+  end,
+    },
+
 
     {
     'Exafunction/codeium.vim',

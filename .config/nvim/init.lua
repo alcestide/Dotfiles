@@ -11,6 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require 'configs.mappings'
+require 'configs.nvimtree'
 require('lazy').setup("plugins")
 require 'configs.treesitter'
 require 'configs.lsp'
+require 'configs.nvterm'
