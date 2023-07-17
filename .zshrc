@@ -11,7 +11,6 @@ PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 (cat ~/.cache/wal/sequences &)
 
-if [ "$TMUX" = "" ]; then tmux; fi
 
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
@@ -95,5 +94,7 @@ alias mount-nas='sudo sshfs -o allow_other root@192.168.1.5:/mnt /mnt/nas'
 alias rwp='~/Documents/random_wal.sh'
 alias disks='sudo fdisk -l'
 alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
+alias e='nvim ~/git/enkefalos'
+alias n='nvim ~/git/personal/org'
 
-
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
