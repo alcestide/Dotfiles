@@ -1,8 +1,31 @@
 return {
+{
+  "NeogitOrg/neogit",
+  dependencies = {
+    "nvim-lua/plenary.nvim",         -- required
+    "sindrets/diffview.nvim",        -- optional - Diff integration
+
+    -- Only one of these is needed, not both.
+    "nvim-telescope/telescope.nvim", -- optional
+    "ibhagwan/fzf-lua",              -- optional
+  },
+  config = true
+},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
 	},
+{ "catppuccin/nvim",
+name = "catppuccin",
+priority = 1000,
+opts = {
+    color_overrides = {
+		mocha = {
+			    base = "#000000",
+				mantle = "#000000",
+				crust = "#000000",
+                },
+			},},},
 
     { "mfussenegger/nvim-dap"   },
 

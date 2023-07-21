@@ -1,9 +1,9 @@
-
+export QT_QPA_PLATFORMTHEME=qt5ct
 export DOOMDIR="/home/alcestide/.config/doom/"
 export VISUAL='emacs'
-export EDITOR='emacs'
+export EDITOR='nvim'
 export TERMINAL='alacritty'
-export BROWSER='chrome'
+export BROWSER='firefox'
 export PATH="/home/alcestide/.local/share/gem/ruby/3.0.0/bin:$PATH"
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
@@ -33,7 +33,7 @@ expand-or-complete-with-dots() {
 zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
 
-HISTFILE=~/.config/zsh/zhistory
+HISTFILE=~/.zhistory
 HISTSIZE=5000
 SAVEHIST=5000
 
@@ -88,13 +88,12 @@ setopt hist_verify             # don't execute immediately upon history expansio
 setopt inc_append_history      # write to the history file immediately, not when the shell exits
 unsetopt share_history         # don't share history between all sessions
 
+alias sudo='nocorrect sudo -E '
 alias vim='nvim'
 alias quitx='killall Xorg'
-alias mount-nas='sudo sshfs -o allow_other root@192.168.1.5:/mnt /mnt/nas'
+alias flesh='sudo sshfs -o allow_other alcestide@192.168.1.230:/mnt /mnt/sshfs'
 alias rwp='~/Documents/random_wal.sh'
 alias disks='sudo fdisk -l'
 alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
-alias e='nvim ~/git/enkefalos'
-alias n='nvim ~/git/personal/org'
 
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
+#if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi

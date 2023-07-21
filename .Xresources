@@ -1,1 +1,8 @@
-Xft.dpi: 88
+Xft.dpi:       100
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xcursor.theme: Bibata-Modern-Ice

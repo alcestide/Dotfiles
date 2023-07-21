@@ -32,3 +32,13 @@ vim.keymap.set('t', '<A-v>', function () require("nvterm.terminal").toggle('vert
 
 vim.keymap.set('n', '<A-h>', function () require("nvterm.terminal").toggle('horizontal') end)
 vim.keymap.set('t', '<A-h>', function () require("nvterm.terminal").toggle('horizontal') end)
+
+------------------------
+-- Window Navigation  --
+------------------------
+
+vim.keymap.set('n', '<C-Left>', '<C-w><Left>', {noremap = true, silent = true })
+vim.keymap.set('n', '<C-Right>', '<C-w><Right>', {noremap = true, silent = true })
+
+vim.keymap.set('n', '<C-h>', '<C-w><Left>', {noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w><Right>', {noremap = true, silent = true })
