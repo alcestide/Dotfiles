@@ -31,7 +31,7 @@ expand-or-complete-with-dots() {
   zle redisplay
 }
 zle -N expand-or-complete-with-dots
-bindkey "^I" expand-or-complete-with-dots
+#bindkey "^I" expand-or-complete-with-dots
 
 HISTFILE=~/.zhistory
 HISTSIZE=5000
@@ -54,8 +54,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+#bindkey '^[[A' history-substring-search-up
+#bindkey '^[[B' history-substring-search-down
 
 function xterm_title_precmd () {
 	print -Pn -- '\e]2;%n@%m %~\a'
@@ -97,3 +97,8 @@ alias disks='sudo fdisk -l'
 alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
 
 #if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
+
+bindkey "^w" forward-word
+bindkey "^b" backward-word
+bindkey "^a" beginning-of-line
+bindkey "^e" end-of-line
