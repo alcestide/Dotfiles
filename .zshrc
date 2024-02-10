@@ -92,7 +92,7 @@ alias sudo='nocorrect sudo -E '
 alias vim='nvim'
 alias quitx='killall Xorg'
 alias flesh='sudo sshfs -o allow_other alcestide@192.168.1.230:/mnt /mnt/sshfs'
-alias rwp='~/Documents/random_wal.sh'
+alias rwp='~/Documents/Scripts/random_wal.sh'
 alias disks='sudo fdisk -l'
 alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
 
