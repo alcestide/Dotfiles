@@ -16,3 +16,7 @@ require('lazy').setup("plugins")
 require 'configs.treesitter'
 require 'configs.lsp'
 require 'configs.nvterm'
+
+vim.g.vimtex_quickfix_enabled = 0
+vim.cmd 'filetype plugin on'
+vim.cmd 'colorscheme catppuccin-mocha'

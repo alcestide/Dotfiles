@@ -16,11 +16,12 @@ vim.opt.clipboard = 'unnamedplus'
 ------------------
 --Custom Keymaps--
 ------------------
-
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', {})
+vim.keymap.set('n', '<leader>cc',':!gcc % -lstdc++ && ./a.out<CR> ', {})
+vim.keymap.set('n', '<C-n>', ':Neotree position=current reveal_force_cwd filesystem right dir=%:p:h toggle<CR>', {})
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files hidden=true<CR>', {})
 vim.keymap.set('n', '<leader>]', ':bn<CR>', {})
 vim.keymap.set('n', '<leader>[', ':bp<CR>', {})
+vim.keymap.set('n', '<leader>x', ':BufferClose<CR>', {})
 vim.keymap.set('n', '<leader><F5>', ':UndotreeToggle<CR>', {})
 
 ------------
