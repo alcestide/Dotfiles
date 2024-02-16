@@ -8,7 +8,7 @@ from libqtile import layout, bar, widget, hook
 
 fn = 'JetBrainsMono Nerd Font MononJetBrainsMono NFM',
 
-colors = os.path.expanduser('~/.cache/wal/colors.json')
+colors = os.path.expanduser('/home/alcestide/.cache/wal/colors.json')
 colordict = json.load(open(colors))
 ColorZ=(colordict['colors']['color0'])
 ColorA=(colordict['colors']['color1'])
@@ -20,7 +20,6 @@ ColorF=(colordict['colors']['color6'])
 ColorG=(colordict['colors']['color7'])
 ColorH=(colordict['colors']['color8'])
 ColorI=(colordict['colors']['color9'])
-
 
 layout_theme = {
     "border_width": 3,
@@ -91,8 +90,9 @@ screens = [
                      other_screen_border="#99cfe0",
                      block_highlight_text_color=ColorZ,
                  ),
-                widget.WindowName(),
-                widget.Systray(font='material-icons',
+                 widget.WindowName(font = 'Arimo Nerd Font', padding = 10 , fontsize = 13),
+                widget.CurrentLayoutIcon(scale=0.45, padding= 10),
+                widget.Systray(font='icomoon-feather',
                                background='#000000',
                                foreground='#000000'),
                 widget.Spacer(length=10),

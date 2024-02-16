@@ -7,24 +7,26 @@
 # from the defined directory. Change the `wallpapers` variable
 # to the desired location.
 
-wallpapers=(/mnt/hdd3/Media/Wallpapers/*)
+wallpapers=(/home/alcestide/Documents/Wallpapers/*)
 wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
 
-#uSpecific wallpaper
+# Specific wallpaper
 
 #wal -i "/mnt/hdd3/Media/Wallpapers/1680294372554987.jpg" &
 #wal -i "/home/alcestide/Documents/Wallpapers/1680294372554987.jpg" &
 
 # Systray & Miscellaneous
 
+dunst &
 volumeicon &
-nicotine -s &
+#nicotine -s &
 # steam -silent &
 nm-applet &
 blueman-applet &
 picom &
-# redshift-gtk &
-emacs --daemon &
-bitwarden-desktop &
+#emacs --daemon &
+redshift-gtk -l 41.902782:12.496366 &
 flameshot &
-python -m vorta --daemonize &
+ferdium &
+sudo vorta &
+#sh /home/alcestide/Documents/Scripts/random_wal.sh

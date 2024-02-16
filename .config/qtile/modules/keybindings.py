@@ -167,12 +167,12 @@ keys = [
              lazy.spawn('betterlockscreen -l dimblur --display 1 --span')
              ),
         # Sound
-         Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
-         Key([], "XF86AudioPause", lazy.spawn("playerctl play-pause")),
-         Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
-         Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%")),
-         Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%")),
-         Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
+         Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause ")),
+         Key([], "XF86AudioPause", lazy.spawn("playerctl play-pause ")),
+         Key([], "XF86AudioMute", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh mute")),
+         Key([], "XF86AudioLowerVolume", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh down")),
+         Key([], "XF86AudioRaiseVolume", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh up")),
+         Key([], "XF86AudioNext", lazy.spawn("playerctl next ")),
          Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
 
          Key([], "F1", lazy.to_screen(0)),
