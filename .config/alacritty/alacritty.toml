@@ -4,7 +4,7 @@ live_config_reload = true
 black = "#3d414f"
 blue = "#86aaec"
 cyan = "#93cee9"
-green = "#90ceaa"
+green = "#922cea"
 magenta = "#c296eb"
 red = "#dd6777"
 white = "#cbced3"
@@ -33,7 +33,7 @@ blinking = "On"
 shape = "Block"
 
 [font]
-size = 11
+size = 13
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -61,3 +61,6 @@ save_to_clipboard = true
 [window.padding]
 x = 15
 y = 15
+
+[env]
+TERM = "xterm-256color"

@@ -6,6 +6,7 @@
 # These two lines of code set random wallpapers
 # from the defined directory. Change the `wallpapers` variable
 # to the desired location.
+g213-led -a ffffff
 
 wallpapers=(/home/alcestide/Documents/Wallpapers/*)
 wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}

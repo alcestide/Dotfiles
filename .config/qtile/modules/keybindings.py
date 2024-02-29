@@ -78,9 +78,8 @@ keys = [
              lazy.spawn('notify-send -t 900 "Keyboard Layout" "Changed to IT."'),
              desc='IT Keyboard Layout'
              ),
-        Key([mod, "Shift"], "F5",
-             lazy.spawn("setxkbmap ru"),
-             lazy.spawn('notify-send -t 900 "Keyboard Layout" "Changed to RU."'),
+        Key([mod, "Shift"], "space",
+             lazy.spawn("/home/alcestide/Documents/Scripts/toggle_keyboard_layout.sh"),
              desc='RU Keyboard Layout'
              ),
           Key([mod, "shift"], "up",
@@ -153,15 +152,6 @@ keys = [
          Key([mod], "f",
              lazy.window.toggle_fullscreen(),
              desc='toggle fullscreen'
-             ),
-         ### Stack controls
-         Key([mod], "space",
-             lazy.layout.next(),
-             desc='Switch window focus to other pane(s) of stack'
-             ),
-         Key([mod, "shift"], "space",
-             lazy.layout.toggle_split(),
-             desc='Toggle between split and unsplit sides of stack'
              ),
          Key([mod, "shift"], "l",
              lazy.spawn('betterlockscreen -l dimblur --display 1 --span')

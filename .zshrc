@@ -2,11 +2,14 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export DOOMDIR="/home/alcestide/.config/doom/"
 export VISUAL='emacs'
 export EDITOR='nvim'
-export TERMINAL='alacritty'
+export TERMINAL='xterm-256color'
 export BROWSER='firefox'
+export BORG_STORAGE_QUOTA="10GB"
+export CALIBRE_USE_DARK_PALETTE=1
 export PATH="/home/alcestide/.local/share/gem/ruby/3.0.0/bin:$PATH"
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
+ZSH_TMUX_AUTOSTART=true
 # Pywal
 
 (cat ~/.cache/wal/sequences &)
@@ -88,6 +91,7 @@ setopt hist_verify             # don't execute immediately upon history expansio
 setopt inc_append_history      # write to the history file immediately, not when the shell exits
 unsetopt share_history         # don't share history between all sessions
 
+alias get_idf='. $HOME/Documents/ESP/esp-idf/export.sh'
 alias sudo='nocorrect sudo -E '
 alias vim='nvim'
 alias quitx='killall Xorg'
@@ -96,9 +100,21 @@ alias rwp='~/Documents/Scripts/random_wal.sh'
 alias disks='sudo fdisk -l'
 alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
 
-#if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
+##if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
 
+function clear-screen-and-scrollback() {
+  builtin echoti civis >"$TTY"
+  builtin print -rn -- $'\e[H\e[2J' >"$TTY"
+  builtin zle .reset-prompt
+  builtin zle -R
+  builtin print -rn -- $'\e[3J' >"$TTY"
+  builtin echoti cnorm >"$TTY"
+}
+
+zle -N clear-screen-and-scrollback
+bindkey '^L' clear-screen-and-scrollback
 bindkey "^w" forward-word
 bindkey "^b" backward-word
 bindkey "^a" beginning-of-line
 bindkey "^e" end-of-line
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
