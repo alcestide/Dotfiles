@@ -1,4 +1,5 @@
 return {
+
 {
   "NeogitOrg/neogit",
   dependencies = {
@@ -11,27 +12,29 @@ return {
   },
   config = true
 },
+
+{
+  "ahmedkhalf/project.nvim",
+  config = function()
+    require("project_nvim").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
 	},
-{ "catppuccin/nvim",
-lazy = true,
-name = "catppuccin",
-priority = 1,
-opts = {
-    color_overrides = {
-		mocha = {
-			    base = "#000000",
-				mantle = "#000000",
-				crust = "#000000",
-                },
-			},
-        style = "catppuccin-mocha",
-        },
+    {"jay-babu/mason-nvim-dap.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "mfussenegger/nvim-dap",},
+        opts = {handlers = {}}},
+    { "mfussenegger/nvim-dap",
     },
-
-    { "mfussenegger/nvim-dap"   },
 
     {
     	'nvim-telescope/telescope.nvim',
@@ -50,7 +53,7 @@ opts = {
             vim.g.vimtex_view_method = 'zathura'
             vim.g.vimtex_quickfix_mode = 0
             vim.g.vimtex_conceal = 'abdmg'
-            vim.g.vimtex_conceallevel = 1
+            --vim.g.vimtex_conceallevel = 1
         end
 
     },
@@ -71,6 +74,7 @@ opts = {
         build = function()
           pcall(vim.cmd, 'MasonUpdate')
         end,
+        opts = { ensure_installed = {"g++", "clangd", "codelldb"} },
         },
 
       {'williamboman/mason-lspconfig.nvim'},
@@ -83,20 +87,48 @@ opts = {
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
     opts = {
         window = {position = "right",},
         source = "filesystem",
-        autochdir = true,
-        follow_current_file = {enabled = true, always_reveal = true},
-        reveal_force_cwd = true,
-
     },
 },
 
+{ "catppuccin/nvim",
+lazy = true,
+name = "catppuccin",
+priority = 1,
+opts = {
+    color_overrides = {
+		mocha = {
+			    base = "#000000",
+				mantle = "#000000",
+				crust = "#000000",
+                },
+			},
+        style = "catppuccin-mocha",
+        },},
+
+    {"rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
+    dependencies = "mfussenegger/nvim-dap",
+config = function()
+    local dap = require("dap")
+    local dapui = require("dapui")
+    dapui.setup()
+    dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+    end
+    dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close()
+    end
+    dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+    end
+end,
+},
 
 
       {'hrsh7th/nvim-cmp'},
@@ -121,15 +153,6 @@ opts = {
     dependencies = { 'nvim-tree/nvim-web-devicons' }
 },
     {
-    'Exafunction/codeium.vim',
-    config = function ()
-    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-  end
-},
-{
   {'romgrk/barbar.nvim',
     dependencies = {
       'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
@@ -144,15 +167,6 @@ opts = {
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
-},
-{
-  "iamcco/markdown-preview.nvim",
-  cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-  build = "cd app && yarn install",
-  init = function()
-    vim.g.mkdp_filetypes = { "markdown" }
-  end,
-  ft = { "markdown" },
 },
 
        }

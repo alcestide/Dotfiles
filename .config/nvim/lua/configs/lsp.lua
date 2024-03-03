@@ -7,6 +7,8 @@ lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
   'clangd',
+  'marksman',
+  'asm_lsp'
 })
 
 -- Fix Undefined global 'vim'
@@ -26,6 +28,7 @@ cmp_mappings['<S-Tab>'] = nil
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
+
 
 lsp.set_preferences({
     suggest_lsp_servers = false,

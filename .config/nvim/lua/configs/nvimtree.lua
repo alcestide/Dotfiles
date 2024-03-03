@@ -6,11 +6,12 @@ return {
   hijack_netrw = true,
   hijack_cursor = true,
   hijack_unnamed_buffer_when_opening = false,
-  respect_buf_cwd = true,
+  sync_root_with_cwd = false,
+  respect_buf_cwd = false,
   update_focused_file = {
-    enable = true,
-    update_cwd = true,
-    update_focused_file = true
+    enable = false,
+    update_root = false,
+    update_cwd = false,
   },
   view = {
     adaptive_size = false,
