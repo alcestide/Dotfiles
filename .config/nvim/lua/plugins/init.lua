@@ -12,7 +12,13 @@ return {
   },
   config = true
 },
-
+{
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equalent to setup({}) function
+},
 {
   "ahmedkhalf/project.nvim",
   config = function()
@@ -78,23 +84,6 @@ return {
         },
 
       {'williamboman/mason-lspconfig.nvim'},
-
-
---- NEOTREE ---
-
-{
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    opts = {
-        window = {position = "right",},
-        source = "filesystem",
-    },
-},
 
 { "catppuccin/nvim",
 lazy = true,
