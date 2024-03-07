@@ -31,7 +31,7 @@ vim.cmd 'filetype plugin on'
 ---vim.cmd ':hi Normal guibg=NONE ctermbg=NONE'
 vim.opt.conceallevel = 2
 vim.g.netrwk_sort_options = "1"
-vim.g.netrw_keepdir = 0
+vim.o.autochdir=true
 -- Alacritty
 
 local alacrittyAutoGroup = vim.api.nvim_create_augroup('alacritty', { clear = true })

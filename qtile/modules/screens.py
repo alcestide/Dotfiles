@@ -3,7 +3,6 @@ import os
 from libqtile.config import Screen
 from libqtile import layout, bar, widget, hook
 
-
 ### Colors
 
 fn = 'JetBrainsMono Nerd Font MononJetBrainsMono NFM',
@@ -120,7 +119,7 @@ screens = [
                            ],
             42,
             margin=[0, 0, 0, 0],
-            opacity=0.84,
+            opacity=0.90,
         ),
         bottom=bar.Gap(0),
         left=bar.Gap(0),

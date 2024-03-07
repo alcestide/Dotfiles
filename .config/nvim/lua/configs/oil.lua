@@ -5,14 +5,16 @@ require("oil").setup({
   -- Id is automatically added at the beginning, and name at the end
   -- See :help oil-columns
   columns = {
+    "permissions",
+    "size",
+    "mtime",
     "icon",
-    -- "permissions",
-    -- "size",
-    -- "mtime",
+
   },
   -- Buffer-local options to use for oil buffers
   buf_options = {
     buflisted = false,
+    bufhidden = "hide",
   },
   -- Window-local options to use for oil buffers
   win_options = {
@@ -64,8 +66,8 @@ require("oil").setup({
     ["<C-c>"] = "actions.close",
     ["<C-l>"] = "actions.refresh",
     ["-"] = "actions.parent",
-    ["_"] = "actions.open_cwd",
-    ["`"] = "actions.cd",
+    ["`"] = "actions.open_cwd",
+    --["`"] = "actions.cd",
     ["~"] = "actions.tcd",
     ["gs"] = "actions.change_sort",
     ["gx"] = "actions.open_external",
