@@ -1,5 +1,6 @@
 return {
-
+{"ggandor/leap.nvim",
+lazy=false,},
 {
   "NeogitOrg/neogit",
   dependencies = {
@@ -19,6 +20,16 @@ return {
     -- use opts = {} for passing setup options
     -- this is equalent to setup({}) function
 },
+
+{'nvim-pack/nvim-spectre'},
+
+{
+  'stevearc/oil.nvim',
+  opts = {},
+  -- Optional dependencies
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+},
+
 {
   "ahmedkhalf/project.nvim",
   config = function()

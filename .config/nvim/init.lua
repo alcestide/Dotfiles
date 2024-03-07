@@ -16,13 +16,22 @@ require('lazy').setup("plugins")
 require 'configs.treesitter'
 require 'configs.lsp'
 require 'configs.nvterm'
+require 'configs.oil'
+
+require('leap').create_default_mappings()
+require('leap').opts.special_keys.prev_target = '<bs>'
+require('leap').opts.special_keys.prev_group = '<bs>'
+require('leap.user').set_repeat_keys('<cr>', '<bs>')
+
+
 
 vim.g.vimtex_quickfix_enabled = 0
 vim.cmd 'filetype plugin on'
 ---vim.cmd 'colorscheme catppuccin-mocha'
 ---vim.cmd ':hi Normal guibg=NONE ctermbg=NONE'
 vim.opt.conceallevel = 2
-
+vim.g.netrwk_sort_options = "1"
+vim.g.netrw_keepdir = 0
 -- Alacritty
 
 local alacrittyAutoGroup = vim.api.nvim_create_augroup('alacritty', { clear = true })

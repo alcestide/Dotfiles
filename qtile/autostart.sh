@@ -9,9 +9,11 @@
 g213-led -a ffffff
 
 wallpapers=(/home/alcestide/Documents/Wallpapers/*)
-#wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
-wal -i /home/alcestide/Documents/Wallpapers/shallow-focus-photo-of-body-of-water-2560x1600.jpg
+wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
+
 # Specific wallpaper
+
+# wal -i /home/alcestide/Documents/Wallpapers/shallow-focus-photo-of-body-of-water-2560x1600.jpg
 
 #wal -i "/mnt/hdd3/Media/Wallpapers/1680294372554987.jpg" &
 #wal -i "/home/alcestide/Documents/Wallpapers/1680294372554987.jpg" &
