@@ -41,3 +41,5 @@ def float_to_front(qtile):
     for window in qtile.currentGroup.windows:
         if window.floating:
             window.cmd_bring_to_front()
+
+#cursor_warp=True

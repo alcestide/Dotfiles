@@ -53,7 +53,7 @@ keys = [
              desc='Spotfy'
              ),
         Key([mod, "shift"], "c",
-             lazy.spawn('thunar'),
+             lazy.spawn('zsh -c "~/Documents/Scripts/wrap_pywal.sh"'),
              desc='File Manager'
              ),
         Key([], "Print",
