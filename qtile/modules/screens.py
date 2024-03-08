@@ -74,7 +74,7 @@ screens = [
                  ),
                  widget.GroupBox(
                      font='Cantarell Bold',
-                     fontsize=12,
+                     fontsize=10,
                      margin_y=4,
                      margin_x=4,
                      padding_y=9,
@@ -89,31 +89,31 @@ screens = [
                      other_screen_border="#99cfe0",
                      block_highlight_text_color=ColorZ,
                  ),
-                 widget.WindowName(font = 'Arimo Nerd Font', padding = 10 , fontsize = 13),
+                 widget.WindowName(font = 'JetBrains Nerd Font Mono', padding = 9 , fontsize = 10),
                 widget.CurrentLayoutIcon(scale=0.45, padding= 10),
                 widget.Systray(font='icomoon-feather',
                                background='#000000',
                                foreground='#000000'),
-                widget.Spacer(length=10),
-                widget.CPU(format='{freq_current}GHz {load_percent}%'
-                ),
-                     widget.Spacer(length=20),
+                #widget.Spacer(length=10),
+                #widget.CPU(format='{freq_current}GHz {load_percent}%'
+                #),
+                widget.Spacer(length=20),
 
-                 widget.TextBox(
-                    text='',
-                    font='icomoon-feather',
-                    fontsize=15,
-                ),
-                widget.Memory(
-                    measure_mem='G'
-                ),
-                     widget.Spacer(length=20),
-
-                widget.TextBox(
-                    text='',
-                    font='icomoon-feather',
-                    fontsize=15,
-                ),
+                 #widget.TextBox(
+                 #   text='',
+                 #   font='icomoon-feather',
+                 #   fontsize=13,
+                #),
+                #widget.Memory(
+                #    measure_mem='G'
+                #),
+                #     widget.Spacer(length=20),
+                #
+                #widget.TextBox(
+                #    text='',
+                #    font='icomoon-feather',
+                #    fontsize=15,
+                #),
                 widget.Clock(),
                 widget.Spacer(length=20)
                            ],
