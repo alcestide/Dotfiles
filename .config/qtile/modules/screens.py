@@ -3,7 +3,6 @@ import os
 from libqtile.config import Screen
 from libqtile import layout, bar, widget, hook
 
-
 ### Colors
 
 fn = 'JetBrainsMono Nerd Font MononJetBrainsMono NFM',
@@ -22,8 +21,8 @@ ColorH=(colordict['colors']['color8'])
 ColorI=(colordict['colors']['color9'])
 
 layout_theme = {
-    "border_width": 3,
-    "margin": 9,
+    "border_width": 0,
+    "margin": 0,
     "border_focus": ColorC,
     "border_normal": ColorZ,
     "font": "JetBrainsMono Nerd Font",
@@ -75,7 +74,7 @@ screens = [
                  ),
                  widget.GroupBox(
                      font='Cantarell Bold',
-                     fontsize=12,
+                     fontsize=10,
                      margin_y=4,
                      margin_x=4,
                      padding_y=9,
@@ -90,41 +89,41 @@ screens = [
                      other_screen_border="#99cfe0",
                      block_highlight_text_color=ColorZ,
                  ),
-                 widget.WindowName(font = 'Arimo Nerd Font', padding = 10 , fontsize = 13),
+                 widget.WindowName(font = 'JetBrains Nerd Font Mono', padding = 9 , fontsize = 10),
                 widget.CurrentLayoutIcon(scale=0.45, padding= 10),
                 widget.Systray(font='icomoon-feather',
                                background='#000000',
                                foreground='#000000'),
-                widget.Spacer(length=10),
-                widget.CPU(format='{freq_current}GHz {load_percent}%'
-                ),
-                     widget.Spacer(length=20),
+                #widget.Spacer(length=10),
+                #widget.CPU(format='{freq_current}GHz {load_percent}%'
+                #),
+                widget.Spacer(length=20),
 
-                 widget.TextBox(
-                    text='',
-                    font='icomoon-feather',
-                    fontsize=15,
-                ),
-                widget.Memory(
-                    measure_mem='G'
-                ),
-                     widget.Spacer(length=20),
-
-                widget.TextBox(
-                    text='',
-                    font='icomoon-feather',
-                    fontsize=15,
-                ),
+                 #widget.TextBox(
+                 #   text='',
+                 #   font='icomoon-feather',
+                 #   fontsize=13,
+                #),
+                #widget.Memory(
+                #    measure_mem='G'
+                #),
+                #     widget.Spacer(length=20),
+                #
+                #widget.TextBox(
+                #    text='',
+                #    font='icomoon-feather',
+                #    fontsize=15,
+                #),
                 widget.Clock(),
                 widget.Spacer(length=20)
                            ],
             42,
             margin=[0, 0, 0, 0],
-            opacity=0.84,
+            opacity=0.90,
         ),
-        bottom=bar.Gap(5),
-        left=bar.Gap(5),
-        right=bar.Gap(5),
+        bottom=bar.Gap(0),
+        left=bar.Gap(0),
+        right=bar.Gap(0),
     ),
     Screen(
         top=bar.Bar(

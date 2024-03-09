@@ -20,6 +20,7 @@ def start_once():
     home = os.path.expanduser('~')
     subprocess.call([home + '/.config/qtile/autostart.sh'])
 
+terminal = 'alacritty'
 wmname = "LG3D"
 
 @hook.subscribe.client_new
@@ -33,4 +34,12 @@ def disable_floating(window):
         window.cmd_disable_floating()
 
 # Extra
-cursor_warp=True
+def float_to_front(qtile):
+    """
+    Bring all floating windows of the group to front
+    """
+    for window in qtile.currentGroup.windows:
+        if window.floating:
+            window.cmd_bring_to_front()
+
+#cursor_warp=True

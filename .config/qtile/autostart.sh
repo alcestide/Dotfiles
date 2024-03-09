@@ -13,6 +13,8 @@ wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
 
 # Specific wallpaper
 
+#wal -i /home/alcestide/Documents/Wallpapers/.jpg
+
 #wal -i "/mnt/hdd3/Media/Wallpapers/1680294372554987.jpg" &
 #wal -i "/home/alcestide/Documents/Wallpapers/1680294372554987.jpg" &
 
@@ -29,5 +31,3 @@ picom &
 redshift-gtk -l 41.902782:12.496366 &
 flameshot &
 ferdium &
-sudo vorta &
-#sh /home/alcestide/Documents/Scripts/random_wal.sh
