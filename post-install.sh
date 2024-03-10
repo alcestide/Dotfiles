@@ -14,8 +14,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 echo "Installing packages listed in file..."
-yay -S - < packages
-[ ! -d "$HOME/Documents/" ] && mkdir -p $HOME/Documents/
+yay -S --needed - < packages
+[ ! -d "$HOME/Documents/" ] && mkdir -p $HOME/Documents/ && cd $HOME
 echo "Copying configuration files..."
 cp -r Wallpapers Scripts $HOME/Documents/
 # sudo cp -r etc/* /etc/
