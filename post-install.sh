@@ -13,9 +13,10 @@ echo "Installing Yay..." && cd $HOME
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+cd $HOME && git clone https://github.com/alcestide/Dotfiles && cd Dotfiles
 echo "Installing packages listed in file..."
 yay -S --needed - < packages
-[ ! -d "$HOME/Documents/" ] && mkdir -p $HOME/Documents/ && cd $HOME
+[ ! -d "$HOME/Documents/" ] && mkdir -p $HOME/Documents/ 
 echo "Copying configuration files..."
 cp -r Wallpapers Scripts $HOME/Documents/
 # sudo cp -r etc/* /etc/
