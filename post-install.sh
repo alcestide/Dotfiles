@@ -6,26 +6,36 @@
 #  / ____ \| | (_|  __/\__ \ |_| | (_| |  __/
 # /_/    \_\_|\___\___||___/\__|_|\__,_|\___|
                                             
-echo "Post-installation script running."
-echo "---------------------------------"
+echo "Alcestide's post-installation script running..."
+echo "============================================"
+validity=no
+while [ "$validity" = no ]; do
+read -p "Are you sure you want to continue (y/n)? " choice
+case "$choice" in 
+    y|Y ) validity=yes && printf "\n -- Continuing... -- \n\n" ;;
+    n|N ) printf "-- Quitting script. -- \n" && exit 0;;
+    * ) printf "\n -- Input is invalid. -- \n\n";;
+esac
+done
+printf "Installing required deps...\n\n"
 sudo pacman -S --needed base-devel git curl --noconfirm
-echo "Installing Yay..." && cd $HOME
+printf "\nInstalling Yay...\n\n" && cd $HOME
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd $HOME && git clone https://github.com/alcestide/Dotfiles && cd Dotfiles
-echo "Installing packages listed in file..."
+printf "\nInstalling packages listed in file...\n\n"
 yay -S --needed - < packages
 [ ! -d "$HOME/Documents/" ] && mkdir -p $HOME/Documents/ 
-echo "Copying configuration files..."
+printf "\nCopying configuration files...\n\n"
 cp -r Wallpapers Scripts $HOME/Documents/
 # sudo cp -r etc/* /etc/
 cp -r .config $HOME/
 cp -r .icons .themes .oh-my-zsh .Xdefaults .Xresources .zshrc $HOME/
 if [[ $SHELL != "/usr/bin/zsh" ]]; then
     chsh -s /usr/bin/zsh
-    printf "Shell changed to zsh.\n" 
+    printf "\nShell changed to zsh.\n\n" 
 else
-    printf "Your shell is already zsh.\n" 
+    printf "\nYour shell is already zsh.\n\n" 
 fi
 zsh
