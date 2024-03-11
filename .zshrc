@@ -9,11 +9,14 @@ export CALIBRE_USE_DARK_PALETTE=1
 export PATH="/home/alcestide/.local/share/gem/ruby/3.0.0/bin:$PATH"
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/gcc
+
+export GIT=/home/$USER/Documents/Git/
 ZSH_TMUX_AUTOSTART=true
 # Pywal
 
 (cat ~/.cache/wal/sequences &)
-
 
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
@@ -50,13 +53,11 @@ setopt HIST_FIND_NO_DUPS   # When searching history don't display results alread
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 
 PROMPT='%B%F{blue}󰣇%f%b %B%F{cyan}%n%f%b %B%F{red}%~%f%b${vcs_info_msg_0_}%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}➜%f%b '
-
 #PROMPT='%B%F{blue}󰣇%f%b  %B%F{magenta}%n%f%b %B%F{red}%~%f%b${vcs_info_msg_0_}%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}%f%b '
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
 #bindkey '^[[A' history-substring-search-up
 #bindkey '^[[B' history-substring-search-down
 
@@ -91,6 +92,16 @@ setopt hist_verify             # don't execute immediately upon history expansio
 setopt inc_append_history      # write to the history file immediately, not when the shell exits
 unsetopt share_history         # don't share history between all sessions
 
+# ============================== #
+
+#===========#
+#  Aliases  #
+#===========#
+
+alias r='ranger'
+alias g='cd $GIT'
+alias p='cd $GIT/personal'
+alias t='thunar &'
 alias get_idf='. $HOME/Documents/ESP/esp-idf/export.sh'
 alias sudo='nocorrect sudo -E '
 alias vim='nvim'
@@ -100,7 +111,9 @@ alias rwp='~/Documents/Scripts/random_wal.sh'
 alias disks='sudo fdisk -l'
 alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
 
-##if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
+# ============================== #
+
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
 
 function clear-screen-and-scrollback() {
   builtin echoti civis >"$TTY"

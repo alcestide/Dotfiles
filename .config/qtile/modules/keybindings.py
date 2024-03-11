@@ -165,7 +165,10 @@ keys = [
          Key([], "XF86AudioNext", lazy.spawn("playerctl next ")),
          Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
 
-         Key([], "F1", lazy.to_screen(0)),
+         Key([mod], "F7", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
+         Key([mod], "F8", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),
+         Key([mod], "F9", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/linkbuds.sh")),
+         Key([], "F1", lazy.spawn("")),
          Key([], "F2", lazy.to_screen(1)),
         ]
 
