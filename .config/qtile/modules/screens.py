@@ -2,6 +2,7 @@ import json
 import os
 from libqtile.config import Screen
 from libqtile import layout, bar, widget, hook
+from libqtile import qtile
 
 ### Colors
 
@@ -50,7 +51,7 @@ def open_pavu():
     qtile.cmd_spawn("pavucontrol")
 
 def open_settings():
-    qtile.cmd_spawn("rofi -show run")
+    qtile.cmd_spawn("rofi -show p -modi p:rofi-power-menu")
 
 screens = [
     Screen(
@@ -70,7 +71,7 @@ screens = [
                     font = "icomoon-feather",
                     fontsize = 24,
                     padding =10,
-                    mouse_callbacks = {"Button1": open_settings},
+                    mouse_callbacks = {"Button1" : open_settings},
                  ),
                  widget.GroupBox(
                      font='Cantarell Bold',
