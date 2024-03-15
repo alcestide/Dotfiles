@@ -105,6 +105,7 @@ alias t='thunar &'
 alias get_idf='. $HOME/Documents/ESP/esp-idf/export.sh'
 alias sudo='nocorrect sudo -E '
 alias vim='nvim'
+alias ls='eza -l --git --hyperlink --icons'
 alias quitx='killall Xorg'
 alias flesh='sudo sshfs -o allow_other alcestide@192.168.1.230:/mnt /mnt/sshfs'
 alias rwp='~/Documents/Scripts/random_wal.sh'
@@ -131,3 +132,6 @@ bindkey "^b" backward-word
 bindkey "^a" beginning-of-line
 bindkey "^e" end-of-line
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+eval "$(zoxide init zsh)"
+autoload -U compinit && compinit

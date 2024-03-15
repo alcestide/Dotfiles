@@ -8,9 +8,9 @@
 # to the desired location.
 
 g213-led -a ffffff
-wallpapers=(/home/alcestide/Documents/Wallpapers/*)
-wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
-#wal -i /home/alcestide/Documents/Wallpapers/.jpg
+#wallpapers=(/home/alcestide/Documents/Wallpapers/*)
+#wal -i ${wallpapers[$(( $RANDOM % ${#wallpapers[@]}))]}
+wal -i /home/alcestide/Documents/Wallpapers/deer.jpg
 dunst &
 volumeicon &
 #nicotine -s &
