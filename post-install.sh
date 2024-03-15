@@ -38,4 +38,8 @@ if [[ $SHELL != "/usr/bin/zsh" ]]; then
 else
     printf "\nYour shell is already zsh.\n\n" 
 fi
-zsh
+zsh && cd $PWD
+
+printf "\n Enabling Gnome Display Manager...\n"
+sudo systemctl enable gdm
+printf "\n You can now reboot your system. \n\n"
