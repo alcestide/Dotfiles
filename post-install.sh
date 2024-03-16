@@ -13,7 +13,7 @@ while [ "$validity" = no ]; do
 read -p "Are you sure you want to continue (y/n)? " choice
 case "$choice" in 
     y|Y ) validity=yes && printf "\n -- Continuing... -- \n\n" ;;
-    n|N ) printf "-- Quitting script. -- \n" && exit 0;;
+    n|N ) printf "\n-- Quitting script. -- \n" && exit 0;;
     * ) printf "\n -- Input is invalid. -- \n\n";;
 esac
 done
