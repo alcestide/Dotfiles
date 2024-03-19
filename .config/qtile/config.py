@@ -15,6 +15,8 @@ from modules.mouse import mouse
 from modules.groups import groups
 
 # Autostart Script
+
+
 @hook.subscribe.startup_once
 def start_once():
     home = os.path.expanduser('~')
@@ -41,5 +43,7 @@ def float_to_front(qtile):
     for window in qtile.currentGroup.windows:
         if window.floating:
             window.cmd_bring_to_front()
+
+
 
 #cursor_warp=True

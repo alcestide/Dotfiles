@@ -5,7 +5,7 @@ mod = "mod4"
 
 Terminal = "alacritty"
 Browser = "firefox"
-# Browser = "google-chrome-stable"
+Ranger = "zsh -c '/home/alcestide/Documents/Scripts/wrap_pywal.sh'"
 
 keys = [
          ### Main
@@ -40,6 +40,10 @@ keys = [
              lazy.spawn("alacritty -e nvim"),
              desc='Neovim'
              ),
+         Key([mod, "shift"], "o",
+             lazy.spawn("obsidian"),
+             desc='Obsidian'
+             ),
          Key([mod, "shift"], "e",
              lazy.spawn("emacsclient -a '' -c"),
              desc='Emacs'
@@ -53,7 +57,7 @@ keys = [
              desc='Spotfy'
              ),
         Key([mod, "shift"], "c",
-             lazy.spawn('zsh -c "~/Documents/Scripts/wrap_pywal.sh"'),
+             lazy.spawn(Ranger),
              desc='File Manager'
              ),
         Key([], "Print",
@@ -157,13 +161,13 @@ keys = [
              lazy.spawn('betterlockscreen -l dimblur --display 1 --span')
              ),
         # Sound
-         Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause ")),
-         Key([], "XF86AudioPause", lazy.spawn("playerctl play-pause ")),
+         Key([], "XF86AudioPlay",  lazy.spawn("mpc toggle")),
+         Key([], "XF86AudioPause", lazy.spawn("mpc toggle")),
          Key([], "XF86AudioMute", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh mute")),
          Key([], "XF86AudioLowerVolume", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh down")),
          Key([], "XF86AudioRaiseVolume", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh up")),
-         Key([], "XF86AudioNext", lazy.spawn("playerctl next ")),
-         Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
+         Key([], "XF86AudioNext",  lazy.spawn("mpc next")),
+         Key([], "XF86AudioPrev",  lazy.spawn("mpc previous")),
 
          Key([mod], "F7", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
          Key([mod], "F8", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),
