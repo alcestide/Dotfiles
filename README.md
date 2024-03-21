@@ -15,6 +15,7 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 
 ![2024-03-14_12-37](https://github.com/alcestide/Dotfiles/assets/106203061/e7cffc48-7012-4014-8fec-1e4eae8bcab6)
 ![2023-05-23_18-36](https://github.com/alcestide/Dotfiles/assets/106203061/410fe864-2921-49de-94d7-3cb85bec2cc4)
+![2024-03-21_18-58](https://github.com/alcestide/Dotfiles/assets/106203061/0a39f29d-eb1d-4624-aa3a-d400b0fb42ac)
 
 ### **Table of Contents**
 * [Configuration](https://github.com/alcestide/Dotfiles#configuration)
@@ -40,10 +41,9 @@ I execute it at Qtile start-up by specifying it inside `.config/qtile/autostart.
 - **Notification Server** [Notification-Daemon (GNOME)](https://archlinux.org/packages/extra/x86_64/notification-daemon/)
 
 - **Lockscreen:** [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
-  
-![2023-07-11_13-27](https://github.com/alcestide/Dotfiles/assets/106203061/ec799937-e554-41e5-89ab-9f02f101e657)
-![2023-07-11_13-17](https://github.com/alcestide/Dotfiles/assets/106203061/838b2042-585a-4fa1-adb7-73a5b542f072)
+
 ![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
+![2023-07-11_13-17](https://github.com/alcestide/Dotfiles/assets/106203061/838b2042-585a-4fa1-adb7-73a5b542f072)
 
 ### Included Files
 
