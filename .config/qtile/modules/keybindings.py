@@ -131,12 +131,12 @@ keys = [
              lazy.layout.shuffle_right(),
              lazy.layout.section_right(),
             ),
-         Key([mod, "control"], "left",
+         Key([mod, mod], "left",
              lazy.layout.shrink(),
              lazy.layout.decrease_nmaster(),
              desc='Shrink window (MonadTall), decrease number in master pane (Tile)'
              ),
-         Key([mod, "control"], "right",
+         Key([mod, mod], "right",
              lazy.layout.grow(),
              lazy.layout.increase_nmaster(),
              desc='Expand window (MonadTall), increase number in master pane (Tile)'
@@ -161,16 +161,16 @@ keys = [
              lazy.spawn('betterlockscreen -l dimblur --display 1 --span')
              ),
         # Sound
-         Key([], "F7", lazy.spawn("mpc toggle")),
-         Key([], "F9", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh mute")),
-         Key([], "F10", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh down")),
-         Key([], "F11", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh up")),
-         Key([], "F6",  lazy.spawn("mpc next")),
-         Key([], "F5",  lazy.spawn("mpc prev")),
+         Key([mod], "F7", lazy.spawn("mpc toggle")),
+         Key([mod], "F9", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh mute")),
+         Key([mod], "F10", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh down")),
+         Key([mod], "F11", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh up")),
+         Key([mod], "F6",  lazy.spawn("mpc next")),
+         Key([mod], "F5",  lazy.spawn("mpc prev")),
 
-         Key([mod], "F7", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
-         Key([mod], "F8", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),
-         Key([mod], "F9", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/linkbuds.sh")),
+         Key([mod], "F1", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
+         Key([mod], "F2", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),
+         Key([mod], "F3", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/linkbuds.sh")),
          Key([], "F1", lazy.spawn("")),
          Key([], "F2", lazy.to_screen(1)),
         ]
