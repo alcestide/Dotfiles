@@ -8,11 +8,16 @@ lsp.ensure_installed({
   'rust_analyzer',
   'clangd',
   'marksman',
-  'asm_lsp'
+  'asm_lsp',
+  'omnisharp',
+  'omnisharp_mono'
 })
+local lspconfig = require "lspconfig"
 
+lspconfig.omnisharp_mono.setup {}
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
