@@ -57,7 +57,7 @@ keys = [
              desc='Spotfy'
              ),
         Key([mod, "shift"], "c",
-             lazy.spawn(Ranger),
+             lazy.spawn('thunar'),
              desc='File Manager'
              ),
         Key([], "Print",
@@ -161,13 +161,12 @@ keys = [
              lazy.spawn('betterlockscreen -l dimblur --display 1 --span')
              ),
         # Sound
-         Key([], "XF86AudioPlay",  lazy.spawn("mpc toggle")),
-         Key([], "XF86AudioPause", lazy.spawn("mpc toggle")),
-         Key([], "XF86AudioMute", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh mute")),
-         Key([], "XF86AudioLowerVolume", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh down")),
-         Key([], "XF86AudioRaiseVolume", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh up")),
-         Key([], "XF86AudioNext",  lazy.spawn("mpc next")),
-         Key([], "XF86AudioPrev",  lazy.spawn("mpc previous")),
+         Key([], "F7", lazy.spawn("mpc toggle")),
+         Key([], "F9", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh mute")),
+         Key([], "F10", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh down")),
+         Key([], "F11", lazy.spawn("sh /home/alcestide/Documents/Scripts/volume/volnotification.sh up")),
+         Key([], "F6",  lazy.spawn("mpc next")),
+         Key([], "F5",  lazy.spawn("mpc prev")),
 
          Key([mod], "F7", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
          Key([mod], "F8", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),

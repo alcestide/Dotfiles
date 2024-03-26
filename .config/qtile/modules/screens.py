@@ -101,7 +101,7 @@ screens = [
                 #widget.Spacer(length=10),
                 #widget.CPU(format='{freq_current}GHz {load_percent}%'
                 #),
-                widget.Spacer(length=20),
+                widget.Spacer(length=15),
 
                  #widget.TextBox(
                  #   text='',
@@ -113,11 +113,11 @@ screens = [
                 #),
                 #     widget.Spacer(length=20),
                 #
-                #widget.TextBox(
-                #    text='',
-                #    font='icomoon-feather',
-                #    fontsize=15,
-                #),
+                widget.TextBox(
+                    text='',
+                    font='icomoon-feather',
+                    fontsize=15,
+                ),
                 widget.Clock(),
                 widget.Spacer(length=20)
                            ],

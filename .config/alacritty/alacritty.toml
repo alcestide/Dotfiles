@@ -33,19 +33,19 @@ blinking = "On"
 shape = "Block"
 
 [font]
-size = 13
+size = 11.5
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "Fira Code"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "Fira Code"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "Fira Code"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Fira Code"
 
 [selection]
 save_to_clipboard = true
