@@ -90,29 +90,35 @@ screens = [
                      other_screen_border="#99cfe0",
                      block_highlight_text_color=ColorZ,
                  ),
-                 widget.Spacer(length=bar.STRETCH),
-                 widget.WindowName(font = 'Fira Code', fontsize = 10, center_aligned=True),
+                 widget.WindowName(font = 'Fira Code', fontsize = 12, center_aligned=True),
                  widget.Spacer(length=bar.STRETCH),
                  widget.Mpd2(status_format='{play_status} {artist} - {title}', font = 'Fira Code'),
-                widget.CurrentLayoutIcon(scale=0.45, padding= 10),
+                 widget.Spacer(length=bar.STRETCH),
                 widget.Systray(font='icomoon-feather',
                                background='#000000',
                                foreground='#000000'),
-                #widget.Spacer(length=10),
-                #widget.CPU(format='{freq_current}GHz {load_percent}%'
-                #),
+
+                widget.CurrentLayoutIcon(scale=0.45, padding= 10),
                 widget.Spacer(length=15),
 
-                 #widget.TextBox(
-                 #   text='',
-                 #   font='icomoon-feather',
-                 #   fontsize=13,
-                #),
-                #widget.Memory(
-                #    measure_mem='G'
-                #),
-                #     widget.Spacer(length=20),
-                #
+widget.TextBox(                    text='',
+                    font='icomoon-feather',
+                    fontsize=14,
+                ),
+                widget.CPU(format='{freq_current}GHz {load_percent}%'
+                ),
+                widget.Spacer(length=15),
+
+                 widget.TextBox(
+                    text='',
+                    font='icomoon-feather',
+                    fontsize=14,
+                ),
+                widget.Memory(
+                    measure_mem='G'
+                ),
+                     widget.Spacer(length=20),
+                
                 widget.TextBox(
                     text='',
                     font='icomoon-feather',
