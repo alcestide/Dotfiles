@@ -131,12 +131,12 @@ keys = [
              lazy.layout.shuffle_right(),
              lazy.layout.section_right(),
             ),
-         Key([mod, mod], "left",
+         Key([mod, "control"], "left",
              lazy.layout.shrink(),
              lazy.layout.decrease_nmaster(),
              desc='Shrink window (MonadTall), decrease number in master pane (Tile)'
              ),
-         Key([mod, mod], "right",
+         Key([mod, "control"], "right",
              lazy.layout.grow(),
              lazy.layout.increase_nmaster(),
              desc='Expand window (MonadTall), increase number in master pane (Tile)'
@@ -168,9 +168,9 @@ keys = [
          Key([mod], "F6",  lazy.spawn("mpc next")),
          Key([mod], "F5",  lazy.spawn("mpc prev")),
 
-         Key([mod], "F1", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
-         Key([mod], "F2", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),
-         Key([mod], "F3", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/linkbuds.sh")),
+         Key([mod], "F7", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
+         Key([mod], "F8", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),
+         Key([mod], "F9", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/linkbuds.sh")),
          Key([], "F1", lazy.spawn("")),
          Key([], "F2", lazy.to_screen(1)),
         ]
