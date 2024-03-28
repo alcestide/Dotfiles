@@ -106,7 +106,7 @@ widget.TextBox(                    text='',
                     fontsize=14,
                 ),
                 widget.CPU(format='{freq_current}GHz {load_percent}%'
-                ),
+                , font="Fira Code"),
                 widget.Spacer(length=15),
 
                  widget.TextBox(
@@ -114,7 +114,7 @@ widget.TextBox(                    text='',
                     font='icomoon-feather',
                     fontsize=14,
                 ),
-                widget.Memory(
+                widget.Memory(font="Fira Code",
                     measure_mem='G'
                 ),
                      widget.Spacer(length=20),
@@ -128,8 +128,8 @@ widget.TextBox(                    text='',
                 widget.Spacer(length=20)
                            ],
             42,
-            margin=[0, 0, 0, 0],
-            opacity=0.90,
+            margin=[15, 10, 10, 15],
+            opacity=0.80,
         ),
         bottom=bar.Gap(0),
         left=bar.Gap(0),
