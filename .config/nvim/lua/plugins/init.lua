@@ -1,4 +1,29 @@
 return {
+
+{
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+},
+
+{
+    "nvim-neorg/neorg",
+     ft = 'norg', -- lazy load on filetype
+    cmd = 'Neorg', -- lazy load on command, allows you to autocomplete :Neorg regardless of whether it's loaded yet
+    --  (you could also just remove both lazy loading things)
+    priority = 30, -- treesitter is on default priority of 50, neorg should load after it.
+    config = function()
+      require('neorg').setup {
+        load = {
+          ['core.defaults'] = {},
+        ["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },
+  ["core.integrations.nvim-cmp"] = {},
+  ["core.concealer"] = { config = { icon_preset = "diamond" } },
+        },
+      }
+    end
+},
+
 {"ggandor/leap.nvim",
 lazy=false,},
 {
@@ -51,6 +76,9 @@ lazy=false,},
             "mfussenegger/nvim-dap",},
         opts = {handlers = {}}},
     { "mfussenegger/nvim-dap",
+        dependencies = {
+            { "nvim-neotest/nvim-nio" },
+        }
     },
 
     {
@@ -151,22 +179,6 @@ end,
         require('lualine').setup()
     end,
     dependencies = { 'nvim-tree/nvim-web-devicons' }
-},
-    {
-  {'romgrk/barbar.nvim',
-    dependencies = {
-      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-    },
-    init = function() vim.g.barbar_auto_setup = false end,
-    opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      -- animation = true,
-      -- insert_at_start = true,
-      -- …etc.
-    },
-    version = '^1.0.0', -- optional: only update when a new 1.x version is released
-  },
 },
 
        }

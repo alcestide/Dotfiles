@@ -27,7 +27,7 @@ require('leap.user').set_repeat_keys('<cr>', '<bs>')
 
 vim.g.vimtex_quickfix_enabled = 0
 vim.cmd 'filetype plugin on'
-vim.cmd 'colorscheme catppuccin-mocha'
+---vim.cmd 'colorscheme catppuccin-mocha'
 ---vim.cmd ':hi Normal guibg=NONE ctermbg=NONE'
 vim.opt.conceallevel = 2
 vim.g.netrwk_sort_options = "1"

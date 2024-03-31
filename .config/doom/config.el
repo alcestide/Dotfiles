@@ -123,7 +123,7 @@
 
 ;; Deadgrep Key
 (global-set-key (kbd "<f5>") #'deadgrep)
-
+(map! :map 'override "SPC ." #'dired)
 ;; Default Deadgrep Dir
 ;;(setq default-directory "~/Git/Enkefalos")
 
