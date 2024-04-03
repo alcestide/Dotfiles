@@ -171,7 +171,7 @@ keys = [
          Key([mod], "F1", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/starship.sh")),
          Key([mod], "F2", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/usb-audio-interface.sh")),
          Key([mod], "F3", lazy.spawn("bash /home/alcestide/Documents/Scripts/volume/default-sink/linkbuds.sh")),
-         Key([], "F1", lazy.spawn("")),
+         Key([], "F1", lazy.to_screen(0)),
          Key([], "F2", lazy.to_screen(1)),
         ]
 
