@@ -16,13 +16,13 @@ Start-up apps are handled by Qtile inside `.config/qtile/autostart.sh`, where I 
 ![2024-03-27_14-29](https://github.com/alcestide/Dotfiles/assets/106203061/6e9ee860-6c28-48f4-9351-1d82c76833fb)
 
 ### **Table of Contents**
-* [Configuration](https://github.com/alcestide/Dotfiles#configuration)
-  * [Included Files](https://github.com/alcestide/Dotfiles#included-files) 
-  * [Screenshots](https://github.com/alcestide/Dotfiles#screenshots)
-* [Qtile Keymaps](https://github.com/alcestide/Dotfiles#qtile-keymaps)
-* [Nvim Keymaps](https://github.com/alcestide/Dotfiles#nvim-keymaps)
+* [Configuration](#configuration)
+  * [Included Files](#included-files) 
+  * [Screenshots](#screenshots)
+* [Qtile Keymaps](#qtile-keymaps)
+* [Nvim Keymaps](#nvim-keymaps)
 
-## Configuration
+## Configuration <a name="configuration"></a>
 
 - **Window Manager:** [Qtile](https://github.com/qtile/qtile) 
 
@@ -43,7 +43,7 @@ Start-up apps are handled by Qtile inside `.config/qtile/autostart.sh`, where I 
 ![2023-05-23_19-11](https://github.com/alcestide/Dotfiles/assets/106203061/40d19df5-920f-49e3-8857-408d7780c930)
 ![2023-07-11_13-17](https://github.com/alcestide/Dotfiles/assets/106203061/838b2042-585a-4fa1-adb7-73a5b542f072)
 
-### Included Files
+### Included Files <a name="included-files"></a>
 
 - `.zshrc`
 - `i3wm`
@@ -62,14 +62,14 @@ Start-up apps are handled by Qtile inside `.config/qtile/autostart.sh`, where I 
 - Bash scripts to manage monitors, keyboard layouts and wallpapers
 
 Included several of the **wallpapers** I use on most of my machines.
-### Screenshots
+### Screenshots <a name="screenshots"> </a>
 
 ![2024-03-21_18-58](https://github.com/alcestide/Dotfiles/assets/106203061/0a39f29d-eb1d-4624-aa3a-d400b0fb42ac)
 ![2023-07-11_13-20](https://github.com/alcestide/Dotfiles/assets/106203061/28eca8a3-4f90-4823-9c57-5ec4daf7f703)
 ![2023-06-13_12-34](https://github.com/alcestide/Dotfiles/assets/106203061/2dd03ca6-4224-4171-a29a-813dc6fa000b)
 ![2023-05-25_00-50](https://github.com/alcestide/Dotfiles/assets/106203061/3b0cbbe4-dca3-49a0-8b67-772c43e80493)
 
-## Qtile Keymaps
+## Qtile Keymaps <a name="qtile-keymaps"> </a>
 
 - `Win + Enter` $\implies$ Open the terminal (Default: alacritty)
 - `Win + X` $\implies$ Close focused window
@@ -84,7 +84,7 @@ Included several of the **wallpapers** I use on most of my machines.
 - `F2` $\implies$ Switch focus to second monitor
 - `Print` $\implies$ Flameshot Screenshot
 
-## Nvim Keymaps
+## Nvim Keymaps <a name="nvim-keymaps"></a>
 
 - `Ctrl + Arrows` $\implies$ Move between panes/windows
 - `Ctrl + n` $\implies$ Toggle Oil
