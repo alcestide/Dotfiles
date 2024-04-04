@@ -10,7 +10,13 @@ lsp.ensure_installed({
   'marksman',
   'asm_lsp',
   'omnisharp',
-  'omnisharp_mono'
+  'omnisharp_mono',
+  'bashls',
+  'clojure_lsp',
+  'gopls',
+  'jdtls',
+  'lua_ls',
+  'ruby_ls',
 })
 local lspconfig = require "lspconfig"
 
@@ -23,12 +29,12 @@ local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
+  ['<Tab>'] = cmp.mapping.confirm({ select = true }),
   --["<C-Space>"] = cmp.mapping.complete(),
 })
 
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
+--cmp_mappings['<Tab>'] = nil
+--cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings

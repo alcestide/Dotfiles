@@ -1,4 +1,13 @@
 return {
+    {'Exafunction/codeium.vim',
+config = function ()
+    -- Change '<C-g>' here to any keycode you like.
+    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+  end,
+  },
 
 {
     "vhyrro/luarocks.nvim",
@@ -89,7 +98,7 @@ lazy=false,},
 
 
     {   "mbbill/undotree"   },
-    {   
+    {
 
         "lervag/vimtex",
         lazy =false,
@@ -159,10 +168,19 @@ end,
 },
 
 
-      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/nvim-cmp',
+  },
       {'hrsh7th/cmp-nvim-lsp'},
-      {'L3MON4D3/LuaSnip'},
-    },
+
+{
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!).
+	build = "make install_jsregexp"
+},
+
+  },
   },
 
   {'akinsho/toggleterm.nvim'},
