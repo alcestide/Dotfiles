@@ -6,15 +6,15 @@ export TERMINAL='xterm-256color'
 export BROWSER='firefox'
 export BORG_STORAGE_QUOTA="10GB"
 export CALIBRE_USE_DARK_PALETTE=1
+export JAVA_FONTS=/usr/share/fonts/TTF
+export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'  
 export PATH="/home/alcestide/.local/share/gem/ruby/3.0.0/bin:$PATH"
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
-
+export PATH=/usr/local/share/npm/bin:$PATH
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/gcc
-
 export GIT=/home/$USER/Documents/Git/
 ZSH_TMUX_AUTOSTART=true
-# Pywal
 
 (cat ~/.cache/wal/sequences &)
 
@@ -76,7 +76,6 @@ if [[ "$TERM" == (kitty*|alacritty*|termite*|gnome*|konsole*|kterm*|putty*|rxvt*
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-
 setopt append_history          # append to history file
 setopt extended_history        # write the history file in the ':start:elapsed;command' format
 unsetopt hist_beep             # don't beep when attempting to access a missing history entry
@@ -92,28 +91,14 @@ setopt hist_verify             # don't execute immediately upon history expansio
 setopt inc_append_history      # write to the history file immediately, not when the shell exits
 unsetopt share_history         # don't share history between all sessions
 
-# ============================== #
-
-#===========#
-#  Aliases  #
-#===========#
-
+alias sudo='nocorrect sudo -E '
 alias r='ranger'
-alias g='cd $GIT'
-alias p='cd $GIT/personal'
-alias t='thunar &'
 alias cd='z'
 alias get_idf='. $HOME/Documents/ESP/esp-idf/export.sh'
-alias sudo='nocorrect sudo -E '
 alias vim='nvim'
 alias ls='eza -l --git --hyperlink --icons'
 alias quitx='killall Xorg'
-alias flesh='sudo sshfs -o allow_other alcestide@192.168.1.230:/mnt /mnt/sshfs'
 alias rwp='~/Documents/Scripts/random_wal.sh'
-alias disks='sudo fdisk -l'
-alias vpn='cd /home/alcestide/Documents && ./fortinet_asl.sh'
-
-# ============================== #
 
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then exec tmux; fi
 
@@ -132,7 +117,7 @@ bindkey "^w" forward-word
 bindkey "^b" backward-word
 bindkey "^a" beginning-of-line
 bindkey "^e" end-of-line
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
 eval "$(zoxide init zsh)"
 autoload -U compinit && compinit
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
