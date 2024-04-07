@@ -3,29 +3,15 @@ import os
 from libqtile.config import Screen
 from libqtile import layout, bar, widget, hook
 from libqtile import qtile
-
-### Colors
+from . import colors
 
 fn = 'JetBrainsMono Nerd Font MononJetBrainsMono NFM',
-
-colors = os.path.expanduser('/home/alcestide/.cache/wal/colors.json')
-colordict = json.load(open(colors))
-ColorZ=(colordict['colors']['color0'])
-ColorA=(colordict['colors']['color1'])
-ColorB=(colordict['colors']['color2'])
-ColorC=(colordict['colors']['color3'])
-ColorD=(colordict['colors']['color4'])
-ColorE=(colordict['colors']['color5'])
-ColorF=(colordict['colors']['color6'])
-ColorG=(colordict['colors']['color7'])
-ColorH=(colordict['colors']['color8'])
-ColorI=(colordict['colors']['color9'])
 
 layout_theme = {
     "border_width": 0,
     "margin": 0,
-    "border_focus": ColorC,
-    "border_normal": ColorZ,
+    "border_focus": colors.ColorC,
+    "border_normal": colors.ColorZ,
     "font": "JetBrainsMono Nerd Font",
     "grow_amount": 2,
 }
@@ -41,7 +27,7 @@ widget_defaults = dict(
     font='icomoon-feather',
     fontsize=10,
     padding=5,
-    background=ColorA
+    background=colors.ColorA
 )
 extension_defaults = widget_defaults.copy()
 
@@ -59,15 +45,15 @@ screens = [
             [
                  widget.Sep(
                     linewidth=2,
-                    foreground=ColorC,
-                    background=ColorC,
+                    foreground=colors.ColorC,
+                    background=colors.ColorC,
                     padding=4,
                     size_percent=50,
                  ),
                  widget.TextBox(
                     text="",
-                    foreground =ColorZ,
-                    background=ColorC,
+                    foreground =colors.ColorZ,
+                    background=colors.ColorC,
                     font = "icomoon-feather",
                     fontsize = 24,
                     padding =10,
@@ -81,14 +67,14 @@ screens = [
                      padding_y=9,
                      padding_x=4,
                      borderwidth=6,
-                     inactive=ColorI,
-                     active=ColorG,
+                     inactive=colors.ColorI,
+                     active=colors.ColorG,
                      rounded=True,
-                     highlight_color=ColorA,
+                     highlight_color=colors.ColorA,
                      highlight_method="block",
-                     this_current_screen_border=ColorC,
+                     this_current_screen_border=colors.ColorC,
                      other_screen_border="#99cfe0",
-                     block_highlight_text_color=ColorZ,
+                     block_highlight_text_color=colors.ColorZ,
                  ),
                  widget.WindowName(font = 'Fira Code', fontsize = 12, center_aligned=True),
                  widget.Mpd2(status_format='{play_status} {artist} - {title}', font = 'Fira Code'),
@@ -139,15 +125,15 @@ Screen(
             [
                  widget.Sep(
                     linewidth=2,
-                    foreground=ColorC,
-                    background=ColorC,
+                    foreground=colors.ColorC,
+                    background=colors.ColorC,
                     padding=4,
                     size_percent=50,
                  ),
                  widget.TextBox(
                     text="",
-                    foreground =ColorZ,
-                    background=ColorC,
+                    foreground =colors.ColorZ,
+                    background=colors.ColorC,
                     font = "icomoon-feather",
                     fontsize = 24,
                     padding =10,
@@ -161,14 +147,14 @@ Screen(
                      padding_y=9,
                      padding_x=4,
                      borderwidth=6,
-                     inactive=ColorI,
-                     active=ColorG,
+                     inactive=colors.ColorI,
+                     active=colors.ColorG,
                      rounded=True,
-                     highlight_color=ColorA,
+                     highlight_color=colors.ColorA,
                      highlight_method="block",
-                     this_current_screen_border=ColorC,
+                     this_current_screen_border=colors.ColorC,
                      other_screen_border="#99cfe0",
-                     block_highlight_text_color=ColorZ,
+                     block_highlight_text_color=colors.ColorZ,
                  ),
                  widget.WindowName(font = 'Fira Code', fontsize = 12, center_aligned=True),
                  widget.Mpd2(status_format='{play_status} {artist} - {title}', font = 'Fira Code'),

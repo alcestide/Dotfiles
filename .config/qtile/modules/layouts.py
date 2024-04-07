@@ -1,9 +1,10 @@
 from libqtile import layout
 from libqtile.config import Match
+from . import colors
 
-layout_theme = {"border_width": 0,
+layout_theme = {"border_width": 2,
                 "margin": 0,
-                "border_focus": "#ffffff",
+                "border_focus": colors.ColorC,
                 "border_normal": "#000000"
                 }
 
