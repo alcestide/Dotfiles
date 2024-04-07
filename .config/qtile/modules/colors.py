@@ -1,7 +1,7 @@
 import json
 import os
 
-colors = os.path.expanduser('/home/alcestide/.cache/wal/colors.json')
+colors = os.path.expanduser('.cache/wal/colors.json')
 colordict = json.load(open(colors))
 ColorZ=(colordict['colors']['color0'])
 ColorA=(colordict['colors']['color1'])
