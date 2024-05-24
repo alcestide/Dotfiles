@@ -23,7 +23,7 @@ printf "\nInstalling Yay...\n\n" && cd $HOME
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-cd $HOME && git clone https://github.com/alcestide/Dotfiles && cd $HOME/Dotfiles/ &&
+cd $HOME && git clone https://github.com/alcestide/Dotfiles && cd ~/Dotfiles/ &&
 printf "\nInstalling packages listed in file...\n\n"
 yay -S --needed --noconfirm - < packages
 [ ! -d "$HOME/Documents/" ] && mkdir -p $HOME/Documents/ 
