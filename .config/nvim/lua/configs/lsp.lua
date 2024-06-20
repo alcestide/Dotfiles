@@ -3,20 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'pyright',
-  'tsserver',
-  'rust_analyzer',
-  'clangd',
-  'marksman',
-  'asm_lsp',
-  'omnisharp',
-  'omnisharp_mono',
-  'bashls',
-  'clojure_lsp',
-  'gopls',
-  'jdtls',
-  'lua_ls',
-  'ruby_ls',
+    'clangd',
 })
 local lspconfig = require "lspconfig"
 

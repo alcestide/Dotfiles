@@ -1,36 +1,8 @@
 return {
-    {'Exafunction/codeium.vim',
-config = function ()
-    -- Change '<C-g>' here to any keycode you like.
-    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
-  end,
-  },
-
 {
     "vhyrro/luarocks.nvim",
     priority = 1000,
     config = true,
-},
-
-{
-    "nvim-neorg/neorg",
-     ft = 'norg', -- lazy load on filetype
-    cmd = 'Neorg', -- lazy load on command, allows you to autocomplete :Neorg regardless of whether it's loaded yet
-    --  (you could also just remove both lazy loading things)
-    priority = 30, -- treesitter is on default priority of 50, neorg should load after it.
-    config = function()
-      require('neorg').setup {
-        load = {
-          ['core.defaults'] = {},
-        ["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },
-  ["core.integrations.nvim-cmp"] = {},
-  ["core.concealer"] = { config = { icon_preset = "diamond" } },
-        },
-      }
-    end
 },
 
 {"ggandor/leap.nvim",
