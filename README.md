@@ -61,7 +61,6 @@ Start-up apps are handled by Qtile inside `.config/qtile/autostart.sh`, where I 
 - X11 Miscellaneous Configurations
 - Bash scripts to manage monitors, keyboard layouts and wallpapers
 
-Included several of the **wallpapers** I use on most of my machines.
 ### Screenshots <a name="screenshots"> </a>
 
 ![2024-03-21_18-58](https://github.com/alcestide/Dotfiles/assets/106203061/0a39f29d-eb1d-4624-aa3a-d400b0fb42ac)
