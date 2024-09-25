@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require 'configs.mappings'
 require 'configs.nvimtree'
 require('lazy').setup("plugins")
+
 require 'configs.treesitter'
 require 'configs.lsp'
 require 'configs.nvterm'
@@ -21,21 +22,16 @@ require 'configs.luasnip'
 require 'configs.oil'
 require 'configs.dap'
 
-require('leap').create_default_mappings()
-require('leap').opts.special_keys.prev_target = '<bs>'
-require('leap').opts.special_keys.prev_group = '<bs>'
-require('leap.user').set_repeat_keys('<cr>', '<bs>')
-
-vim.g.codeium_enabled = true
-vim.g.codeium_disable_bindings = 1
-vim.g.vimtex_quickfix_enabled = 0
+--vim.g.codeium_enabled = true
+--vim.g.codeium_disable_bindings = 1
+--vim.g.vimtex_quickfix_enabled = 0
 vim.cmd 'filetype plugin on'
-vim.cmd 'colorscheme catppuccin-mocha'
----vim.cmd ':hi Normal guibg=NONE ctermbg=NONE'
+vim.cmd ':hi Normal guibg=NONE ctermbg=NONE'
 vim.opt.conceallevel = 2
 vim.g.netrwk_sort_options = "1"
 vim.o.autochdir=true
 
+vim.cmd 'colorscheme catppuccin-mocha'
 require("dap").adapters.lldb = {
 	type = "executable",
 	command = "/usr/bin/lldb-vscode", -- adjust as needed

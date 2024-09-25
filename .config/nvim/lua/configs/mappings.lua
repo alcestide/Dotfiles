@@ -50,3 +50,4 @@ vim.keymap.set('n', '<leader>dr', ':lua require"dap".continue()<CR>', {})
 vim.keymap.set('n', '<leader>dt', ':lua require"dap".terminate()<CR>', {})
 vim.keymap.set(n, '<leader>dk', function() require('dap').continue() end)
 
+vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', {})

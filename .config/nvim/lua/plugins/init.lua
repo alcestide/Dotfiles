@@ -5,37 +5,57 @@ return {
     config = true,
 },
 
-{"ggandor/leap.nvim",
-lazy=false,},
-{
-  "NeogitOrg/neogit",
-  dependencies = {
-    "nvim-lua/plenary.nvim",         -- required
-    "sindrets/diffview.nvim",        -- optional - Diff integration
-
-    -- Only one of these is needed, not both.
-    "nvim-telescope/telescope.nvim", -- optional
-    "ibhagwan/fzf-lua",              -- optional
-  },
-  config = true
-},
 {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
     config = true
-    -- use opts = {} for passing setup options
-    -- this is equalent to setup({}) function
 },
 
 {'nvim-pack/nvim-spectre'},
-
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
 {
   'stevearc/oil.nvim',
   opts = {},
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
 },
+{
+    'rcarriga/nvim-notify',
+    lazy = false,
+    config = function ()
+      require("notify").setup {
+        stages = "fade_in_slide_out",
+        timeout = 3000,
+        fps = 144,
+      }
+      vim.notify = require('notify')
+    end
+  },
+  {"MunifTanjim/nui.nvim",},
+{
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+  },
 
+{
+    'goolord/alpha-nvim',
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+},
 {
   "ahmedkhalf/project.nvim",
   config = function()
@@ -70,25 +90,6 @@ lazy=false,},
 
 
     {   "mbbill/undotree"   },
-    {
-
-        "lervag/vimtex",
-        lazy =false,
-        init = function()
-            vim.g.vimtex_flavor = 'latex'
-            vim.g.vimtex_view_method = 'zathura'
-            vim.g.vimtex_quickfix_mode = 0
-            vim.g.vimtex_conceal = 'abdmg'
-            --vim.g.vimtex_conceallevel = 1
-        end
-
-    },
-    {'nvim-orgmode/orgmode',
-    ft = {'org'},
-    config = function()
-            require('orgmode').setup{}
-    end
-    },
 
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -111,11 +112,11 @@ name = "catppuccin",
 priority = 1,
 opts = {
     color_overrides = {
-		mocha = {
-			    base = "#000000",
-				mantle = "#000000",
-				crust = "#000000",
-                },
+		--mocha = {
+			    --base = "#000000",
+				--mantle = "#000000",
+				--crust = "#000000",
+                --},
 			},
         style = "catppuccin-mocha",
         },},
