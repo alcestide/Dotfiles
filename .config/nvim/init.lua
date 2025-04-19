@@ -11,50 +11,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+require 'configs.options'
 require 'configs.mappings'
-require 'configs.nvimtree'
 require('lazy').setup("plugins")
-
+require 'configs.nvimtree'
 require 'configs.treesitter'
 require 'configs.lsp'
+require 'configs.cmp'
 require 'configs.nvterm'
 require 'configs.luasnip'
 require 'configs.oil'
-require 'configs.dap'
-
---vim.g.codeium_enabled = true
---vim.g.codeium_disable_bindings = 1
---vim.g.vimtex_quickfix_enabled = 0
-vim.cmd 'filetype plugin on'
-vim.cmd ':hi Normal guibg=NONE ctermbg=NONE'
-vim.opt.conceallevel = 2
-vim.g.netrwk_sort_options = "1"
-vim.o.autochdir=true
-
 vim.cmd 'colorscheme catppuccin-mocha'
-require("dap").adapters.lldb = {
-	type = "executable",
-	command = "/usr/bin/lldb-vscode", -- adjust as needed
-	name = "lldb",
-}
 
-local lldb = {
-	name = "Launch lldb",
-	type = "lldb", -- matches the adapter
-	request = "launch", -- could also attach to a currently running process
-	program = function()
-		return vim.fn.input(
-			"Path to executable: ",
-			vim.fn.getcwd() .. "/",
-			"file"
-		)
-	end,
-	cwd = "${workspaceFolder}",
-	stopOnEntry = false,
-	args = {},
-	runInTerminal = false,
-}
 
-require('dap').configurations.rust = {
-	lldb -- different debuggers or more configurations can be used here
-}

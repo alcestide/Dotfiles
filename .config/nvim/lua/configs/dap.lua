@@ -5,6 +5,16 @@ dap.adapters.cppdbg = {
   command = '/home/alcestide/Documents/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
 }
 
+require('dap').configurations.rust = {
+	lldb -- different debuggers or more configurations can be used here
+}
+
+require("dap").adapters.lldb = {
+	type = "executable",
+	command = "/usr/bin/lldb-vscode", -- adjust as needed
+	name = "lldb",
+}
+
 dap.configurations.cpp = {
   {
     name = "Launch file",
@@ -29,3 +39,22 @@ dap.configurations.cpp = {
     end,
   },
 }
+
+local lldb = {
+	name = "Launch lldb",
+	type = "lldb", -- matches the adapter
+	request = "launch", -- could also attach to a currently running process
+	program = function()
+		return vim.fn.input(
+			"Path to executable: ",
+			vim.fn.getcwd() .. "/",
+			"file"
+		)
+	end,
+	cwd = "${workspaceFolder}",
+	stopOnEntry = false,
+	args = {},
+	runInTerminal = false,
+}
+
+

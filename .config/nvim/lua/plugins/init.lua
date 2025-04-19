@@ -1,4 +1,50 @@
 return {
+
+    ------------------------------------
+    --------------- Mini ---------------
+  {
+    "echasnovski/mini.icons",
+    opts = {},
+    lazy = true,
+    specs = {
+      { "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
+    },
+    init = function()
+      package.preload["nvim-web-devicons"] = function()
+        require("mini.icons").mock_nvim_web_devicons()
+        return package.loaded["nvim-web-devicons"]
+      end
+    end,
+  },
+  {
+    "echasnovski/mini.starter",
+        version = '*',
+        lazy = true,
+        init = function()
+        require("mini.starter").setup()
+    end,
+  },
+    ------------------------------------
+
+    {
+  "folke/which-key.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  },
+  keys = {
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Buffer Local Keymaps (which-key)",
+    },
+  },
+},
+
 {
     "vhyrro/luarocks.nvim",
     priority = 1000,
@@ -6,10 +52,16 @@ return {
 },
 
 {
+    "ThePrimeagen/harpoon"
+},
+
+{
     'windwp/nvim-autopairs',
     event = "InsertEnter",
     config = true
 },
+
+
 
 {'nvim-pack/nvim-spectre'},
     "nvim-neo-tree/neo-tree.nvim",
@@ -26,6 +78,7 @@ return {
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
 },
+
 {
     'rcarriga/nvim-notify',
     lazy = false,
@@ -50,22 +103,14 @@ return {
     }
   },
 
-{
-    'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
-},
+--[[
 {
   "ahmedkhalf/project.nvim",
   config = function()
     require("project_nvim").setup {
       -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-},
+  },
+--]]
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
@@ -105,18 +150,22 @@ return {
         },
 
       {'williamboman/mason-lspconfig.nvim'},
-
+{
+  "karb94/neoscroll.nvim",
+  opts = {
+  },
+},
 { "catppuccin/nvim",
 lazy = true,
 name = "catppuccin",
 priority = 1,
 opts = {
     color_overrides = {
-		--mocha = {
-			    --base = "#000000",
-				--mantle = "#000000",
-				--crust = "#000000",
-                --},
+		mocha = {
+			    base = "#000000",
+				mantle = "#000000",
+				crust = "#000000",
+                },
 			},
         style = "catppuccin-mocha",
         },},
