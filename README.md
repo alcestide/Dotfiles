@@ -1,7 +1,7 @@
 # alk-Dotfiles
-Ever-changing _ricing_ and `*UNIX` OS configuration. Work in progress.
+Ever-changing _ricing_,`*UNIX` and some `Windows` configurations. Work in progress.
 
-I mostly use Arch-Linux with _tiling-wms_, especially [i3-wm](https://github.com/i3/i3) and currently [qtile](https://github.com/qtile/qtile) (even though I tend to wm-hop quite often 'cause I'm curious of the other alternatives). For what concerns _text editors_, I'm mostly a [Neovim](https://github.com/neovim/neovim) and [Doom Emacs](https://github.com/doomemacs/doomemacs) user, who sometimes also tinkers with JetBrains IDEs. 
+I mostly use Windows and Arch-Linux with _tiling-wms_, especially Hyprland, [i3-wm](https://github.com/i3/i3) and currently [qtile](https://github.com/qtile/qtile) (even though I tend to wm-hop quite often 'cause I'm curious of the other alternatives). For what concerns _text editors_, I'm mostly a [Neovim](https://github.com/neovim/neovim) and [Doom Emacs](https://github.com/doomemacs/doomemacs) user, who sometimes also tinkers with JetBrains IDEs. 
 
 Make sure to have all the proper **fonts** installed in your system (qtile require **ttf-icomoon-feather**, JetBrains Mono Nerd and Fira Code, but you should still be able to **change** them quite easily). 
 
