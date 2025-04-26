@@ -8,7 +8,8 @@ config.color_schemes = {
     ['DarkMocha'] = mochaOverride,
 }
 
-config.color_scheme = 'DarkMocha'
+config.color_scheme = 'Catppuccin Mocha'
 config.enable_tab_bar = false
+config.max_fps = 120
 
 return config
