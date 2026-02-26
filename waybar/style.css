@@ -124,6 +124,7 @@
 }
 
 /* --- Right Modules (Single, Seamless Bar ) --- */
+#tray,
 #bluetooth,
 #pulseaudio,
 #backlight,
@@ -140,6 +141,7 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+#tray:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
 #backlight:hover,
@@ -149,10 +151,17 @@
   background-color: rgb(41, 42, 53);
 }
 
+#tray {
+    margin-left: 0px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+}
+
 #bluetooth {
   margin-left: 0px; 
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  /* border-top-left-radius: 6px;
+   border-bottom-left-radius: 6px;*/
 }
 
 #battery {

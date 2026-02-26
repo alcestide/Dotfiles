@@ -12,6 +12,7 @@
   "modules-center": ["clock"],
 
   "modules-right": [
+    "tray",
     "custom/pomodoro",
     "bluetooth",
     "network",
@@ -89,6 +90,13 @@
     "interval": 1600,
     "exec": "$HOME/.config/waybar/scripts/uptime.sh"
   },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "icons": {
+    }
+},
   
   "backlight": {
         "format": "{icon}  {percent}%",
